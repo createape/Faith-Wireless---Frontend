@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import "./colors";
+@import "./general";
+
+$font:'Nunito',
+sans-serif;
+;
+
+body {
+  background-color: $page-background;
+  font-family: $font;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url(../images/background.png);
+
+  &__content {
+    max-width: 400px;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    @extend .shadow;
+
+    .card-body {
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    label {
+      color: #000000;
+    }
+
+    input {
+      height: 60px;
+      padding-left: 30px;
+      padding-right: 40px;
+      font-family: $font;
+
+      &::placeholder {
+        color: #000000;
+      }
+
+    }
+
+    .lost_password {
+      a {
+        font-size: 14px;
+        font-family: $font;
+        color: $black;
+        text-decoration: underline;
+      }
+
+    }
+
+    .btn {
+      background-color: $green-light;
+      border: 0;
+      color: $white;
+      font-size: 18px;
+      font-weight: 900;
+      transition: background-color .6s ease-in-out;
+
+      &:hover {
+        background-color: $green-dark;
+      }
+    }
+  }
+
+  &__logo {
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}

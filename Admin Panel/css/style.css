@@ -1,1 +1,96 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap");
+.shadow, .login__content {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
+          box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
+  border-radius: 10px;
+}
+
+.card {
+  border: 0;
+}
+
+body {
+  background-color: #F0F7F7;
+  font-family: "Nunito", sans-serif;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url(../images/background.png);
+}
+
+.login__content {
+  max-width: 400px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.login__content .card-body {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login__content label {
+  color: #000000;
+}
+
+.login__content input {
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 40px;
+  font-family: "Nunito", sans-serif;
+}
+
+.login__content input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.login__content input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.login__content input::-ms-input-placeholder {
+  color: #000000;
+}
+
+.login__content input::placeholder {
+  color: #000000;
+}
+
+.login__content .lost_password a {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.login__content .btn {
+  background-color: #2CBF88;
+  border: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-transition: background-color .6s ease-in-out;
+  transition: background-color .6s ease-in-out;
+}
+
+.login__content .btn:hover {
+  background-color: #005A66;
+}
+
+.login__logo {
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=style.css.map */

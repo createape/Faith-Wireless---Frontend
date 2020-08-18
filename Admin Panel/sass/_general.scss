@@ -1,0 +1,11 @@
+@import "colors";
+
+.shadow {
+  background: $white;
+  box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
+  border-radius: 10px;
+}
+
+.card {
+  border: 0;
+}
