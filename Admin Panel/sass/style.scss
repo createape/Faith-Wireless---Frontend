@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url('//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css');
+
 @import "./colors";
 @import "./general";
 
@@ -80,4 +82,234 @@ body {
     margin: 0 auto;
     margin-bottom: 30px;
   }
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-nav {
+  min-height: 100vh;
+  flex: 0 0 360px;
+  background-color: $green;
+  transition: flex .5s ease-in-out;
+
+  @media(max-width:1400px) {
+    flex: 0 0 300px;
+  }
+
+  .toggle-main-nav {
+    width: 20px;
+    height: 246px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $green-dark;
+    color: $green;
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    border: 0;
+    padding-left: 3px;
+    z-index: 99;
+    outline: none !important;
+    cursor: pointer;
+
+
+    i {
+      &::before {
+        font-size: 18px;
+      }
+    }
+
+    img {
+      width: 12px;
+      transform-origin: center center;
+      transition: transform .5s ease-in-out;
+    }
+
+    &.show,
+    &:hover {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.show:hover {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+
+    span {
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  .nav {
+    max-width: 256px;
+    margin-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media(max-width:1400px) {
+      margin-left: 40px;
+      max-width: 230px;
+    }
+
+    li {
+
+      a {
+        position: relative;
+        display: flex;
+        height: 60px;
+        position: relative;
+        padding: 0;
+        width: 100%;
+        white-space: nowrap;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 340px;
+          height: 100%;
+          border-radius: 8px;
+          background-color: $page-background;
+          position: absolute;
+          left: -15px;
+          top: 0;
+          opacity: 0;
+          transition: opacity .5s ease-in-out;
+        }
+
+        i {
+          &:before {
+            position: relative;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            transition: transform .5s ease-in-out;
+          }
+
+
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 300;
+          position: absolute;
+          width: calc(100% - 40px);
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-bottom: 1px solid $green-dark;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          transition: font-weight .5s ease-in-out;
+          font-family: $font;
+          transition: transform .5s ease-in-out;
+        }
+
+
+      }
+
+      &:first-child {
+        span {
+          border-top: 1px solid $green-dark;
+        }
+
+      }
+
+      &:hover,
+      &.active {
+        a {
+          color: $green-dark;
+          // padding-left: 20px;
+
+          &::before {
+            opacity: 1;
+          }
+
+          i {
+            &::before {
+              transform: translate(5px, -50%);
+            }
+
+          }
+
+          span {
+            font-weight: 700;
+            transform: translate(5px, -50%);
+            border-color: transparent;
+          }
+        }
+
+      }
+    }
+  }
+
+  &.collasep {
+    flex: 0 0 80px;
+
+    .nav {
+      max-width: 60px;
+      margin-left: 20px;
+
+      li {
+
+        a {
+          &::before {
+            width: 70px;
+            left: 0px;
+          }
+
+          i {
+            display: block;
+            width: 100%;
+
+            &::before {
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          span {
+            display: none;
+          }
+        }
+
+        &:hover,
+        &.active {
+          a {
+
+            i {
+              &::before {
+                transform: translate(-50%, -50%);
+              }
+
+            }
+
+            span {
+              transform: translate(0px, -50%);
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+.main-content {
+  min-height: 100vh;
+  flex: 1;
+  padding-left: 94px;
+  padding-right: 94px;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap");
+@import url("//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css");
 .shadow, .login__content {
   background: #ffffff;
   -webkit-box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
@@ -92,5 +93,232 @@ body {
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-nav {
+  min-height: 100vh;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 360px;
+          flex: 0 0 360px;
+  background-color: #009199;
+  -webkit-transition: -webkit-box-flex .5s ease-in-out;
+  transition: -webkit-box-flex .5s ease-in-out;
+  transition: flex .5s ease-in-out;
+  transition: flex .5s ease-in-out, -webkit-box-flex .5s ease-in-out, -ms-flex .5s ease-in-out;
+}
+
+@media (max-width: 1400px) {
+  .main-nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+  }
+}
+
+.main-nav .toggle-main-nav {
+  width: 20px;
+  height: 246px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #005A66;
+  color: #009199;
+  position: fixed;
+  top: 50vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 0;
+  padding-left: 3px;
+  z-index: 99;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.main-nav .toggle-main-nav i::before {
+  font-size: 18px;
+}
+
+.main-nav .toggle-main-nav img {
+  width: 12px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.main-nav .toggle-main-nav.show img, .main-nav .toggle-main-nav:hover img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main-nav .toggle-main-nav.show:hover img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.main-nav .toggle-main-nav span {
+  position: absolute;
+  left: -9999px;
+}
+
+.main-nav a {
+  color: #ffffff;
+}
+
+.main-nav .nav {
+  max-width: 256px;
+  margin-left: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1400px) {
+  .main-nav .nav {
+    margin-left: 40px;
+    max-width: 230px;
+  }
+}
+
+.main-nav .nav li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.main-nav .nav li a:before {
+  content: "";
+  display: block;
+  width: 340px;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #F0F7F7;
+  position: absolute;
+  left: -15px;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.main-nav .nav li a i:before {
+  position: relative;
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 18px;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.main-nav .nav li a span {
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-bottom: 1px solid #005A66;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  -webkit-transition: font-weight .5s ease-in-out;
+  transition: font-weight .5s ease-in-out;
+  font-family: "Nunito", sans-serif;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.main-nav .nav li:first-child span {
+  border-top: 1px solid #005A66;
+}
+
+.main-nav .nav li:hover a, .main-nav .nav li.active a {
+  color: #005A66;
+}
+
+.main-nav .nav li:hover a::before, .main-nav .nav li.active a::before {
+  opacity: 1;
+}
+
+.main-nav .nav li:hover a i::before, .main-nav .nav li.active a i::before {
+  -webkit-transform: translate(5px, -50%);
+          transform: translate(5px, -50%);
+}
+
+.main-nav .nav li:hover a span, .main-nav .nav li.active a span {
+  font-weight: 700;
+  -webkit-transform: translate(5px, -50%);
+          transform: translate(5px, -50%);
+  border-color: transparent;
+}
+
+.main-nav.collasep {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+}
+
+.main-nav.collasep .nav {
+  max-width: 60px;
+  margin-left: 20px;
+}
+
+.main-nav.collasep .nav li a::before {
+  width: 70px;
+  left: 0px;
+}
+
+.main-nav.collasep .nav li a i {
+  display: block;
+  width: 100%;
+}
+
+.main-nav.collasep .nav li a i::before {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-nav.collasep .nav li a span {
+  display: none;
+}
+
+.main-nav.collasep .nav li:hover a i::before, .main-nav.collasep .nav li.active a i::before {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-nav.collasep .nav li:hover a span, .main-nav.collasep .nav li.active a span {
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+}
+
+.main-content {
+  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 94px;
+  padding-right: 94px;
 }
 /*# sourceMappingURL=style.css.map */
