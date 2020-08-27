@@ -10,60 +10,87 @@ $(function () {
     }
   }).trigger("resize");
 
-  //  Data tables
-  var table = $('.data-table').DataTable();
 
-  $('#search-input').on('keyup', function () {
-    table.search(this.value).draw();
-  });
+  if($('.data-table').length > 0){
+      //  Data tables
+    var table = $('.data-table').DataTable();
 
-  $('.data-table__arrow-back').on('click', function (e) {
-    e.preventDefault();
-    if (!$(".dataTables_paginate .previous").hasClass("disabled")) {
-      $(".dataTables_paginate .previous a").trigger("click");
-    }
-  });
-  $('.data-table__arrow-next').on('click', function (e) {
-    e.preventDefault();
-    if (!$(".dataTables_paginate .next").hasClass("disabled")) {
-      $(".dataTables_paginate .next a").trigger("click");
-    }
-  });
-
-
-  $("#export-data").on("click", function name(params) {
-    var data = table.buttons.exportData({
-      columns: ':visible'
+    $('#search-input').on('keyup', function () {
+      table.search(this.value).draw();
     });
-    exportCSVFile(data.header, data.body, 'Data');
-  });
 
-  $('.column-visibility-control-close, .column-visibility-control-show').on('click', function (e) {
-    e.preventDefault();
-    $(".column-visibility-control").toggleClass("show");
-  });
-
-  $('.column-visibility-control  input').on('click', function (e) {
-    columnVisibilityControl(table);
-  });
-  columnVisibilityControl(table);
-
-  function columnVisibilityControl(table) {
-    $('.column-visibility-control  input').each(function (params) {
-      // Get the column API object
-      var column = table.column($(this).val());
-      if ($(this).is(':checked')) {
-        // Toggle the visibility
-        column.visible(true);
-      } else {
-        // Toggle the visibility
-        column.visible(false);
+    $('.data-table__arrow-back').on('click', function (e) {
+      e.preventDefault();
+      if (!$(".dataTables_paginate .previous").hasClass("disabled")) {
+        $(".dataTables_paginate .previous a").trigger("click");
       }
     });
+    $('.data-table__arrow-next').on('click', function (e) {
+      e.preventDefault();
+      if (!$(".dataTables_paginate .next").hasClass("disabled")) {
+        $(".dataTables_paginate .next a").trigger("click");
+      }
+    });
+
+
+    $("#export-data").on("click", function name(params) {
+      var data = table.buttons.exportData({
+        columns: ':visible'
+      });
+      exportCSVFile(data.header, data.body, 'Data');
+    });
+
+    $('.column-visibility-control-close, .column-visibility-control-show').on('click', function (e) {
+      e.preventDefault();
+      $(".column-visibility-control").toggleClass("show");
+    });
+
+    $('.column-visibility-control  input').on('click', function (e) {
+      columnVisibilityControl(table);
+    });
+    columnVisibilityControl(table);
   }
+
+
+//  Form controls
+$(".form-group").on("change",function () {
+
+  if($(this).find(".form-control").get(0).checkValidity()){
+    $($(this).find(".form-control").get(0)).parent().addClass("is-valid");
+    $($(this).find(".form-control").get(0)).parent().removeClass("is-invalid ");
+  }else{
+    $($(this).find(".form-control").get(0)).parent().addClass("is-invalid ");
+    $($(this).find(".form-control").get(0)).parent().removeClass("is-valid");
+  }
+
+});
+
+$(".form-group").on("keyup",function () {
+  $(".form-group .form-control").each(function () {
+    if($(this).val().length > 0){
+      $(this).parent().addClass("has-content");
+    }else{
+      $(this).parent().removeClass("has-content");
+    }
+  });
 });
 
 
+});
+
+function columnVisibilityControl(table) {
+  $('.column-visibility-control  input').each(function (params) {
+    // Get the column API object
+    var column = table.column($(this).val());
+    if ($(this).is(':checked')) {
+      // Toggle the visibility
+      column.visible(true);
+    } else {
+      // Toggle the visibility
+      column.visible(false);
+    }
+  });
+}
 
 function convertToCSV(objArray) {
   var array = typeof objArray != "object" ? JSON.parse(objArray) : objArray;

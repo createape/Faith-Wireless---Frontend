@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="">
   <div class="body">
     <div class="main-container">
       <div class="main-nav">
@@ -137,7 +137,8 @@
             <div class="main-content__body__header">
               <h2>Subscribers</h2>
               <div class="main-content__body__header__actions">
-                <a href="#" class="btn btn-lg"><i class="mdi mdi-plus-circle" aria-hidden="true"></i> Add a
+                <a href="#" data-toggle="modal" data-target="#show-modal" class="btn btn-lg"><i
+                    class="mdi mdi-plus-circle" aria-hidden="true"></i> Add a
                   Subscriber</a>
               </div>
             </div>
@@ -152,100 +153,103 @@
                     <input type="text" id="search-input" placeholder="filter subscriber...">
                   </div>
                   <div class="data-table__actions">
-                      <button type="button" id="export-data" class="btn btn-sm"><i class="mdi mdi-table" aria-hidden="true"></i> <span>Export as CSV</span> </button>
-                      <button type="button" class="btn btn-sm column-visibility-control-show"><i class="mdi mdi-cog" aria-hidden="true"></i> </button>
-                      <div class="column-visibility-control">
-                        <div class="row">
-                          <div class="col-12">
-                            <h3>Show Items</h3>
-                            <button class="column-visibility-control-close"><i class="mdi mdi-close" aria-hidden="true"></i></button>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="0"  checked>
-                              <span class="checkmark"></span>
-                              Phone
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="6" checked>
-                                <span class="checkmark"></span>
-                                Activation Date
-                              </label>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="1">
-                              <span class="checkmark"></span>
-                              Data Usage
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="7">
-                                <span class="checkmark"></span>
-                                Last Updated
-                              </label>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="2">
-                              <span class="checkmark"></span>
-                              Buy Plan
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="Status">
-                                <span class="checkmark"></span>
-                                Status
-                              </label>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="3">
-                              <span class="checkmark"></span>
-                              Sell Plan
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="Balance">
-                                <span class="checkmark"></span>
-                                Balance
-                              </label>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="4">
-                              <span class="checkmark"></span>
-                              Imei
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="Email">
-                                <span class="checkmark"></span>
-                                Email
-                              </label>
-                          </div>
-                          <div class="col-6">
-                            <label class="form-check-label" >
-                              <input type="checkbox" class="form-check-input" value="5">
-                              <span class="checkmark"></span>
-                              Iccid
-                            </label>
-                          </div>
-                          <div class="col-6">
-                              <label class="form-check-label" >
-                                <input type="checkbox" class="form-check-input" value="Church">
-                                <span class="checkmark"></span>
-                                Church
-                              </label>
-                          </div>
+                    <button type="button" id="export-data" class="btn btn-sm"><i class="mdi mdi-table"
+                        aria-hidden="true"></i> <span>Export as CSV</span> </button>
+                    <button type="button" class="btn btn-sm column-visibility-control-show"><i class="mdi mdi-cog"
+                        aria-hidden="true"></i> </button>
+                    <div class="column-visibility-control">
+                      <div class="row">
+                        <div class="col-12">
+                          <h3>Show Items</h3>
+                          <button class="column-visibility-control-close"><i class="mdi mdi-close"
+                              aria-hidden="true"></i></button>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="0" checked>
+                            <span class="checkmark"></span>
+                            Phone
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="6" checked>
+                            <span class="checkmark"></span>
+                            Activation Date
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="1">
+                            <span class="checkmark"></span>
+                            Data Usage
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="7">
+                            <span class="checkmark"></span>
+                            Last Updated
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="2">
+                            <span class="checkmark"></span>
+                            Buy Plan
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="Status">
+                            <span class="checkmark"></span>
+                            Status
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="3">
+                            <span class="checkmark"></span>
+                            Sell Plan
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="Balance">
+                            <span class="checkmark"></span>
+                            Balance
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="4">
+                            <span class="checkmark"></span>
+                            Imei
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="Email">
+                            <span class="checkmark"></span>
+                            Email
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="5">
+                            <span class="checkmark"></span>
+                            Iccid
+                          </label>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="Church">
+                            <span class="checkmark"></span>
+                            Church
+                          </label>
                         </div>
                       </div>
+                    </div>
                   </div>
                 </div>
                 <div class="table-responsive">
@@ -277,7 +281,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -290,7 +295,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -303,7 +309,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -316,7 +323,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -329,7 +337,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -342,7 +351,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -355,7 +365,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -368,7 +379,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -381,7 +393,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -394,7 +407,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -407,7 +421,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -420,7 +435,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -433,7 +449,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -446,7 +463,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -459,7 +477,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -472,7 +491,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -485,7 +505,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -498,7 +519,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -511,7 +533,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -524,7 +547,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -537,7 +561,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -550,7 +575,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-active"><i class="mdi mdi-play" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -563,7 +589,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-suspend"><i class="mdi mdi-pause" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                       <tr>
                         <td>2157793205</td>
@@ -576,7 +603,8 @@
                         <td>20/07/30</td>
                         <td>20/07/30</td>
                         <td class="status-cancel"><i class="mdi mdi-stop" aria-hidden="true"></i></td>
-                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
+                        <td class="d-flex"><a href="#"><i class="mdi mdi-pencil" aria-hidden="true"></i></a><a
+                            href="#"><i class="mdi mdi-eye" aria-hidden="true"></i></a></td>
                       </tr>
                     </tbody>
 
@@ -612,6 +640,118 @@
         </section>
 
 
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="show-modal" tabindex="-1" role="dialog" aria-labelledby="show-modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="show-modalLabel">New Customer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" name="first-name" id="first-name"
+                      aria-describedby="firstName" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" aria-describedby="lastName"
+                      placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-number">Street Number</label>
+                    <input type="text" class="form-control" id="street-number" name="street-number"
+                      aria-describedby="streetNumber" placeholder="Street Number">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-direction">Street Direction</label>
+                    <input type="text" class="form-control" id="street-direction" aria-describedby="streetDirection"
+                      placeholder="Street Direction">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-type">Street Type</label>
+                    <input type="text" class="form-control" id="street-type" name="street-type"
+                      aria-describedby="streetType" placeholder="Street Type">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="street-name">Street Name</label>
+                    <input type="text" class="form-control" id="street-name" name="street-name"
+                      aria-describedby="streetName" placeholder="Street Name">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" name="city" id="city" aria-describedby="emailHelp"
+                      placeholder="City">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <select class="form-control" name="state" id="state">
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                    </select>
+
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" name="zip" id="zip" aria-describedby="Zip"
+                      placeholder="Zip">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="email"
+                      placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="password">Pasword</label>
+                    <input type="password" class="form-control" name="password" id="password"
+                      aria-describedby="password" placeholder="Password">
+                  </div>
+                </div>
+                <div class="col-sm-12 text-center mt-4 pt-2">
+                  <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+
+        </div>
       </div>
     </div>
   </div>

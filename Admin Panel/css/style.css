@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap");
 @import url("//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css");
-.shadow, .login__content, .main-content .main-content__body .card, .main-content .data-table-container .data-table-header .data-table__actions .column-visibility-control {
+.shadow, .login__content, .main-content .main-content__body .card, .main-content .data-table-container .data-table-header .data-table__actions .column-visibility-control, .modal-content {
   background: #ffffff;
   -webkit-box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
           box-shadow: 0px 60px 40px rgba(5, 149, 153, 0.08);
@@ -74,20 +74,6 @@ body {
   text-decoration: underline;
 }
 
-.login__content .btn {
-  background-color: #2CBF88;
-  border: 0;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 900;
-  -webkit-transition: background-color .6s ease-in-out;
-  transition: background-color .6s ease-in-out;
-}
-
-.login__content .btn:hover {
-  background-color: #005A66;
-}
-
 .login__logo {
   width: 140px;
   display: block;
@@ -95,15 +81,7 @@ body {
   margin-bottom: 30px;
 }
 
-.main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  position: relative;
-}
-
-.main-container:before {
+.footer-background:before {
   content: "";
   display: block;
   width: 100vw;
@@ -116,6 +94,34 @@ body {
   background-position: center bottom;
   background-image: url(../images/background.png);
   z-index: -1;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.btn {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: background-color .6s ease-in-out;
+  transition: background-color .6s ease-in-out;
+}
+
+.btn-primary {
+  height: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 0;
+  background-color: #2CBF88 !important;
+}
+
+.btn:hover {
+  background-color: #005A66;
 }
 
 .main-nav {
@@ -1060,7 +1066,7 @@ body {
   margin-right: 0px;
 }
 
-/* The container */
+/* Custom Checkbox */
 .form-check-label {
   display: block;
   position: relative;
@@ -1124,5 +1130,144 @@ body {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.modal-backdrop {
+  background-color: #005A66;
+}
+
+.modal-header {
+  position: relative;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.modal-header .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal-header .close span {
+  font-size: 34px;
+  font-weight: 200;
+}
+
+.modal-header .modal-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  padding-top: 30px;
+  line-height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .modal-header .modal-title {
+    font-size: 26px;
+  }
+}
+
+.modal-body {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media (max-width: 1024px) {
+  .modal-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.modal-body .btn-primary {
+  text-transform: uppercase;
+}
+
+.modal-footer {
+  padding-top: 0;
+  border-top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-footer .btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.form-group .form-control {
+  border-color: #F2F2F2;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  color: #000000;
+  border-radius: 5px;
+  outline: none !important;
+}
+
+.form-group .form-control::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.form-group .form-control:-ms-input-placeholder {
+  color: #000000;
+}
+
+.form-group .form-control::-ms-input-placeholder {
+  color: #000000;
+}
+
+.form-group .form-control::placeholder {
+  color: #000000;
+}
+
+.form-group input,
+.form-group select {
+  height: 60px !important;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.form-group.has-content label {
+  opacity: 1;
+}
+
+.form-group.has-content .form-control {
+  background-color: #ffffff;
+  border-color: #ccc;
+}
+
+.form-group.is-valid label {
+  color: #2CBF88;
+}
+
+.form-group.is-valid .form-control {
+  border-color: #2CBF88;
+}
+
+.form-group.is-invalid label {
+  color: #de4b4b;
+}
+
+.form-group.is-invalid .form-control {
+  border-color: #de4b4b;
 }
 /*# sourceMappingURL=style.css.map */
