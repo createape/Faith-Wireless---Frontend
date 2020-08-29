@@ -1,4 +1,6 @@
 @import "colors";
+$font:'Nunito',
+sans-serif;
 
 .shadow {
   background: $white;
@@ -8,4 +10,143 @@
 
 .card {
   border: 0;
+}
+
+.max-width-420 {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 0;
+  padding-top: 10px;
+
+  label {
+    font-size: 14px;
+    font-family: $font;
+    color: $black;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+  .form-control {
+    border-color: #F2F2F2;
+    background-color: #F2F2F2;
+    font-size: 18px;
+    color: $black;
+    border-radius: 5px;
+    outline: none !important;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  input,
+  select {
+    height: 60px !important;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  &.has-content {
+    label {
+      opacity: 1;
+    }
+
+    .form-control {
+      background-color: $white;
+      border-color: #ccc;
+    }
+  }
+
+  &.is-valid {
+    label {
+      color: $green-light;
+    }
+
+    .form-control {
+      border-color: $green-light;
+    }
+  }
+
+  &.is-invalid {
+    label {
+      color: $red;
+    }
+
+    .form-control {
+      border-color: $red;
+    }
+  }
+}
+
+.table thead th {
+  border-bottom: 0;
+  border-top: 0;
+  font-family: $font;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 60px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #999999;
+}
+
+.table tfoot th {
+  border-bottom: 0;
+  border-top: 0;
+  font-family: $font;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 60px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: $black;
+  font-weight: 800;
+  border-top: 1px solid #00919947;
+
+  a {
+    color: $black;
+  }
+}
+
+
+.table tbody td {
+  color: $black;
+  border-color: #00919947;
+  // border-bottom: 0;
+  // border-top: 0;
+  font-family: $font;
+  font-size: 13px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  height: 60px;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  a {
+    padding: 0px 10px;
+    color: $black;
+  }
+
+  i {
+    font-size: 20px;
+    color: #ccc;
+  }
+}
+
+
+.table {
+  tr {
+    &:hover {
+      td {
+        background-color: #D4EDEE;
+      }
+    }
+  }
 }

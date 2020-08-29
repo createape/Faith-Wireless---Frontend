@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/cr-1.5.2/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/sc-2.0.2/sp-1.1.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="">
+  <div class="body">
+    <div class="main-container">
+      <div class="main-nav">
+
+        <!-- chevron-double-left
+        chevron-double-right -->
+        <button class="toggle-main-nav">
+          <span>show/hidden menu</span>
+          <img src="./images/arrow_toggle.png" alt="show/hidden menu">
+        </button>
+        <nav>
+          <ul class="nav flex-column">
+            <li class="active"><a class="nav-link active" href="#"> <i class="mdi mdi-view-dashboard"
+                  aria-hidden="true"></i>
+                <span>Dashboard</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cog-outline" aria-hidden="true"></i>
+                <span>Settings</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-sticker-outline" aria-hidden="true"></i>
+                <span>Website
+                  Support Ticket</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-folder-edit" aria-hidden="true"></i>
+                <span>Cms</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-checkbox-blank-outline" aria-hidden="true"></i>
+                <span>Blocks</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-ticket-confirmation-outline"
+                  aria-hidden="true"></i>
+                <span>Coupons</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-calculator" aria-hidden="true"></i> <span>Tax
+                  Calculator</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-sim" aria-hidden="true"></i> <span>Sim
+                  Managment</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-view-list-outline" aria-hidden="true"></i>
+                <span>Modules</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-toy-brick-outline" aria-hidden="true"></i>
+                <span>Plugins</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cellphone-android" aria-hidden="true"></i>
+                <span>Phone
+                  Services</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-account-multiple-outline" aria-hidden="true"></i>
+                <span>Users</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cart-outline" aria-hidden="true"></i>
+                <span>Plans</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-account-tie" aria-hidden="true"></i>
+                <span>Customer</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cellphone-wireless" aria-hidden="true"></i>
+                <span>Subscribers</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-alpha-b-box" aria-hidden="true"></i>
+                <span>Orders</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-credit-card-outline" aria-hidden="true"></i>
+                <span>Billing</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-alpha-b-box" aria-hidden="true"></i> <span>Tax
+                  Collected</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-email-outline" aria-hidden="true"></i>
+                <span>Newsletter Subscriptions</span></a></li>
+          </ul>
+
+
+
+
+        </nav>
+      </div>
+      <div class="main-content">
+
+        <section class="main-content__header">
+          <div class="container">
+            <div class="row main-content__header__content">
+              <div class="col-auto main-content__header__summary">
+                <ul class="nav">
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/total.svg" alt="">
+                      <span>
+                        <i>Total:</i>
+                        <b>300</b>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/suspended.svg" alt="">
+                      <span>
+                        <i>Suspended:</i>
+                        <b>12</b>
+                      </span>
+                    </a>
+
+                  </li>
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/canceled.svg" alt="">
+                      <span>
+                        <i>Canceled:</i>
+                        <b>12</b>
+                      </span>
+                    </a>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto main-content__header__search">
+                <form action="">
+                  <div class="main-content__header__search__container">
+
+                    <input type="text" placeholder="search...">
+                    <select name="" id="">
+                      <option value="1">In active</option>
+                      <option value="1">In active</option>
+                      <option value="1">In active</option>
+                    </select>
+                    <input class="" type="submit">
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-content__body ">
+          <div class="container">
+            <div class="main-content__body__header">
+              <div class="main-content__body__header__title">
+                <span class="badge badge-secondary">Paid</span>
+                <h2>Christian Massi</h2>
+                <div class="main-content__body__header__title__info">
+                  <span><i class="mdi mdi-play" aria-hidden="true"></i></span>
+                  <span>Phone: <b>2157793205</b></span>
+                  <span>Balance: <b>$120</b></span>
+                </div>
+
+              </div>
+              <div class="main-content__body__header__actions">
+                <a href="#" data-toggle="modal" data-target="#show-modal" class="btn btn-lg"><i
+                    class="mdi mdi-file-pdf-box" aria-hidden="true"></i> View PDF</a>
+              </div>
+            </div>
+            <div class="main-content__body__content ">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="shadow card">
+                    <div class="card-body ">
+                      <div class="card-content-header">
+                        <h3>Activity</h3>
+
+                      </div>
+
+                      <div class="row justify-content-center">
+                        <div class="col-lg-3 chart-container ">
+                          <div class="chart-content">
+                            <div class="chart-content-info">
+                              <div class="chart-content-info__content">
+                                <b>4.01<span>GB</span></b>
+                                <div>out of </div>
+                                <div>5<span>GB</span> </div>
+                              </div>
+
+
+                            </div>
+                            <canvas class="chart-content-item" width="210" height="210" data-type="doughnut"
+                              data-data="5,1" data-colors="#2CBF88,#009199"></canvas>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="table-responsive">
+                            <table class="table table-hover max-width-420" style="width:100%">
+                              <thead>
+                                <tr>
+                                  <th>Line</th>
+                                  <th>Voice</th>
+                                  <th>Text</th>
+                                  <th>Data</th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>2157793205</td>
+                                  <td>380 min</td>
+                                  <td>16 msg</td>
+                                  <td>4012 mb</td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th>TOTAL</th>
+                                  <th>380 min</th>
+                                  <th>16 msg</th>
+                                  <th>4012 mb</th>
+
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                          <p>Mobile Service Charges: <b>$120.00</b></p>
+                          <p>Taxes & Fees: <b>$0.00</b></p>
+                          <p>Total Due: <b>$40.00</b></p>
+                          <p>Payments Received: <b>$120.00</b></p>
+                          <p>Balance: <b>$0.00</b></p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="shadow card">
+                    <div class="card-body ">
+                      <div class="card-content-header">
+                        <h3>Options</h3>
+
+                      </div>
+
+                      <div class="row justify-content-center">
+
+                        <div class="col-lg-6">
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Buy Plan <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">Unlimited Elite
+                              </a></b>
+                          </p>
+
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Sell Plan <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">Unlimited
+                              </a></b>
+                          </p>
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Imei <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">359677093218362
+                              </a></b>
+                          </p>
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Iccid
+                              <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">89014104272063413855
+                              </a></b>
+                          </p>
+                        </div>
+                        <div class="col-lg-6">
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Internation
+                              <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">Calling; Roaming
+                              </a></b>
+                          </p>
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">World Connect
+                              <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">Value; Advantage
+                              </a></b>
+                          </p>
+                          <p class="show-info-content">
+                            <span class="show-info-content__title">Passport Plans
+                              <a href="#">
+                                <i class="mdi mdi-square-edit-outline" aria-hidden="true"></i></a></span>
+                            <b class="show-info-content__desc"><a href="#">Voice, SMS & Data; Data Only
+                              </a></b>
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="shadow card">
+                    <div class="card-body ">
+                      <div class="card-content-header">
+                        <h3>Overview</h3>
+                        <div class="card-content-header__actions">
+                          <button type="button" id="export-data" class="btn btn-sm btn-primary"><i
+                              class="mdi mdi-pencil" aria-hidden="true"></i> <span>Edit</span> </button>
+
+                        </div>
+                      </div>
+                      <div class="info-slider">
+                        <div class="info-slider__item">
+                          <div class="row justify-content-center">
+
+                            <div class="col-lg-6">
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">NAME </span> <b class="show-info-content__desc">
+                                  Thomas Fromenthal</b>
+                              </p>
+
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">COMPANY </span>
+                                <b class="show-info-content__desc">Faith Wireless</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">LOCAL TIME </span>
+                                <b class="show-info-content__desc">6:39 PM CDT</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">MAGNETIC ACCOUNT SINCE
+                                </span>
+                                <b class="show-info-content__desc">11/26/2018 3:45 PM CST</b>
+                              </p>
+                            </div>
+                            <div class="col-lg-6">
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">ACCOUNT TYPE
+                                </span>
+                                <b class="show-info-content__desc">Personal</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">SUBSCRIBER SINCE</span>
+                                <b class="show-info-content__desc">11/26/2018 9:45 AM CST</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">EMAIL</span>
+                                <b class="show-info-content__desc">herb@comerstoneministries.net</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">CHURCH</span>
+                                <b class="show-info-content__desc">Cornerstone Ministries</b>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info-slider__item">
+                          <div class="row justify-content-center">
+
+                            <div class="col-lg-6">
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">NAME </span> <b class="show-info-content__desc">
+                                  Thomas Fromenthal</b>
+                              </p>
+
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">COMPANY </span>
+                                <b class="show-info-content__desc">Faith Wireless</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">LOCAL TIME </span>
+                                <b class="show-info-content__desc">6:39 PM CDT</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">MAGNETIC ACCOUNT SINCE
+                                </span>
+                                <b class="show-info-content__desc">11/26/2018 3:45 PM CST</b>
+                              </p>
+                            </div>
+                            <div class="col-lg-6">
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">ACCOUNT TYPE
+                                </span>
+                                <b class="show-info-content__desc">Personal</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">SUBSCRIBER SINCE</span>
+                                <b class="show-info-content__desc">11/26/2018 9:45 AM CST</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">EMAIL</span>
+                                <b class="show-info-content__desc">herb@comerstoneministries.net</b>
+                              </p>
+                              <p class="show-info-content">
+                                <span class="show-info-content__title">CHURCH</span>
+                                <b class="show-info-content__desc">Cornerstone Ministries</b>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="shadow card">
+                    <div class="card-body ">
+                      <div class="card-content-header">
+                        <h3>Invoices</h3>
+                        <div class="card-content-header__actions">
+                          <button type="button" id="export-data" class="btn btn-sm"><i class="mdi mdi-credit-card-clock"
+                              aria-hidden="true"></i> <span>Manage Billing</span>
+                          </button>
+                          <button type="button" id="export-data" class="btn btn-sm btn-primary"><i
+                              class="mdi mdi-format-list-text" aria-hidden="true"></i> <span>Show All</span> </button>
+
+                        </div>
+                      </div>
+
+                      <div class="row justify-content-center">
+
+                        <div class="col-lg-12">
+                          <div class="table-responsive">
+                            <table class="table table-hover" style="width:100%">
+                              <thead>
+                                <tr>
+                                  <th>Invoice</th>
+                                  <th>Mobile Number</th>
+                                  <th>Item</th>
+                                  <th>Service Period </th>
+                                  <th>Total </th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>8420 </td>
+                                  <td>(337) 578-8838 </td>
+                                  <td>Devoted (Unlimited Talk & Text. 2 GB Data) </td>
+                                  <td>6/15/2020 EDT - 7/14/2020 EDT </td>
+                                  <td><b>$40.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>8420 </td>
+                                  <td>(337) 578-8838 </td>
+                                  <td>Devoted (Unlimited Talk & Text. 2 GB Data) </td>
+                                  <td>6/15/2020 EDT - 7/14/2020 EDT </td>
+                                  <td><b>$40.00</b></td>
+                                </tr>
+                                <tr>
+                                  <td>8420 </td>
+                                  <td>(337) 578-8838 </td>
+                                  <td>Devoted (Unlimited Talk & Text. 2 GB Data) </td>
+                                  <td>6/15/2020 EDT - 7/14/2020 EDT </td>
+                                  <td><b>$40.00</b></td>
+                                </tr>
+                              </tbody>
+
+                            </table>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <section class="main-content__footer">
+          <div class="container">
+            <button type="button" class="btn btn-sm btn-fill"><i class="mdi mdi-play" aria-hidden="true"></i>
+              Activation</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-import" aria-hidden="true"></i>
+              Port In</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-pause" aria-hidden="true"></i>
+              Suspend</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-play-pause" aria-hidden="true"></i>
+              UnSuspend</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-stop" aria-hidden="true"></i>
+              Cancel</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-close-thick" aria-hidden="true"></i>
+              Cancel Portin
+            </button>
+          </div>
+
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="show-modal" tabindex="-1" role="dialog" aria-labelledby="show-modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="show-modalLabel">New Customer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" name="first-name" id="first-name"
+                      aria-describedby="firstName" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" aria-describedby="lastName"
+                      placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-number">Street Number</label>
+                    <input type="text" class="form-control" id="street-number" name="street-number"
+                      aria-describedby="streetNumber" placeholder="Street Number">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-direction">Street Direction</label>
+                    <input type="text" class="form-control" id="street-direction" aria-describedby="streetDirection"
+                      placeholder="Street Direction">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="street-type">Street Type</label>
+                    <input type="text" class="form-control" id="street-type" name="street-type"
+                      aria-describedby="streetType" placeholder="Street Type">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="street-name">Street Name</label>
+                    <input type="text" class="form-control" id="street-name" name="street-name"
+                      aria-describedby="streetName" placeholder="Street Name">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" name="city" id="city" aria-describedby="emailHelp"
+                      placeholder="City">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <select class="form-control" name="state" id="state">
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                      <option value="0">State</option>
+                    </select>
+
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" name="zip" id="zip" aria-describedby="Zip"
+                      placeholder="Zip">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="email"
+                      placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="password">Pasword</label>
+                    <input type="password" class="form-control" name="password" id="password"
+                      aria-describedby="password" placeholder="Password">
+                  </div>
+                </div>
+                <div class="col-sm-12 text-center mt-4 pt-2">
+                  <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/cr-1.5.2/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/sc-2.0.2/sp-1.1.1/sl-1.3.1/datatables.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
