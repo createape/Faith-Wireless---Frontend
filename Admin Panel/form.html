@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/cr-1.5.2/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/sc-2.0.2/sp-1.1.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="">
+  <div class="body">
+    <div class="main-container">
+      <div class="main-nav">
+
+        <!-- chevron-double-left
+        chevron-double-right -->
+        <button class="toggle-main-nav">
+          <span>show/hidden menu</span>
+          <img src="./images/arrow_toggle.png" alt="show/hidden menu">
+        </button>
+        <nav>
+          <ul class="nav flex-column">
+            <li class="active"><a class="nav-link active" href="#"> <i class="mdi mdi-view-dashboard"
+                  aria-hidden="true"></i>
+                <span>Dashboard</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cog-outline" aria-hidden="true"></i>
+                <span>Settings</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-sticker-outline" aria-hidden="true"></i>
+                <span>Website
+                  Support Ticket</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-folder-edit" aria-hidden="true"></i>
+                <span>Cms</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-checkbox-blank-outline" aria-hidden="true"></i>
+                <span>Blocks</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-ticket-confirmation-outline"
+                  aria-hidden="true"></i>
+                <span>Coupons</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-calculator" aria-hidden="true"></i> <span>Tax
+                  Calculator</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-sim" aria-hidden="true"></i> <span>Sim
+                  Managment</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-view-list-outline" aria-hidden="true"></i>
+                <span>Modules</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-toy-brick-outline" aria-hidden="true"></i>
+                <span>Plugins</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cellphone-android" aria-hidden="true"></i>
+                <span>Phone
+                  Services</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-account-multiple-outline" aria-hidden="true"></i>
+                <span>Users</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cart-outline" aria-hidden="true"></i>
+                <span>Plans</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-account-tie" aria-hidden="true"></i>
+                <span>Customer</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-cellphone-wireless" aria-hidden="true"></i>
+                <span>Subscribers</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-alpha-b-box" aria-hidden="true"></i>
+                <span>Orders</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-credit-card-outline" aria-hidden="true"></i>
+                <span>Billing</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-alpha-b-box" aria-hidden="true"></i> <span>Tax
+                  Collected</span></a></li>
+            <li><a class="nav-link active" href="#"> <i class="mdi mdi-email-outline" aria-hidden="true"></i>
+                <span>Newsletter Subscriptions</span></a></li>
+          </ul>
+
+
+
+
+        </nav>
+      </div>
+      <div class="main-content">
+
+        <section class="main-content__header">
+          <div class="container">
+            <div class="row main-content__header__content">
+              <div class="col-auto main-content__header__summary">
+                <ul class="nav">
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/total.svg" alt="">
+                      <span>
+                        <i>Total:</i>
+                        <b>300</b>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/suspended.svg" alt="">
+                      <span>
+                        <i>Suspended:</i>
+                        <b>12</b>
+                      </span>
+                    </a>
+
+                  </li>
+                  <li class="main-content__header__summary__item">
+                    <a href="#">
+                      <img src="./images/canceled.svg" alt="">
+                      <span>
+                        <i>Canceled:</i>
+                        <b>12</b>
+                      </span>
+                    </a>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto main-content__header__search">
+                <form action="">
+                  <div class="main-content__header__search__container">
+
+                    <input type="text" placeholder="search...">
+                    <select name="" id="">
+                      <option value="1">In active</option>
+                      <option value="1">In active</option>
+                      <option value="1">In active</option>
+                    </select>
+                    <input class="" type="submit">
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-content__body ">
+          <div class="container">
+            <div class="main-content__body__header justify-content-center">
+              <div class="main-content__body__header__title">
+                <h2 class="text-center">Create new entry</h2>
+              </div>
+
+            </div>
+            <div class="main-content__body__content ">
+
+              <div class="form-container shadow card">
+                <div class="card-body ">
+
+
+                  <div class="row pb-4">
+                    <div class="col-sm-6">
+
+                      <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" class="form-control" name="first-name" id="first-name"
+                          aria-describedby="firstName" placeholder="First Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" name="last-name"
+                          aria-describedby="lastName" placeholder="Last Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="street-number">Street Number</label>
+                        <input type="text" class="form-control" id="street-number" name="street-number"
+                          aria-describedby="streetNumber" placeholder="Street Number">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="street-direction">Street Direction</label>
+                        <input type="text" class="form-control" id="street-direction" aria-describedby="streetDirection"
+                          placeholder="Street Direction">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="street-type">Street Type</label>
+                        <input type="text" class="form-control" id="street-type" name="street-type"
+                          aria-describedby="streetType" placeholder="Street Type">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="street-name">Street Name</label>
+                        <input type="text" class="form-control" id="street-name" name="street-name"
+                          aria-describedby="streetName" placeholder="Street Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" id="city" aria-describedby="emailHelp"
+                          placeholder="City">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="state">State</label>
+                        <select class="form-control" name="state" id="state">
+                          <option value="0">State</option>
+                          <option value="0">State</option>
+                          <option value="0">State</option>
+                          <option value="0">State</option>
+                        </select>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" name="zip" id="zip" aria-describedby="Zip"
+                          placeholder="Zip">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="email"
+                          placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="password">Pasword</label>
+                        <input type="password" class="form-control" name="password" id="password"
+                          aria-describedby="password" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center justify-content-between">
+                      <p class="mb-0">Tethering
+                      </p>
+                      <div class="toggles">
+                        <input type="checkbox" name="checkbox1" class="ios-toggle toggles_checkbox3" />
+                        <label for="checkbox1" class="checkbox-label" data-off="off" data-on="on"></label></div>
+                    </div>
+                    <div class="col-sm-12 text-center mt-4 pt-2">
+                      <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <section class="main-content__footer">
+          <div class="container ">
+            <button type="button" class="btn btn-sm btn-fill"><i class="mdi mdi-play" aria-hidden="true"></i>
+              Activation</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-import" aria-hidden="true"></i>
+              Port In</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-pause" aria-hidden="true"></i>
+              Suspend</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-play-pause" aria-hidden="true"></i>
+              UnSuspend</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-stop" aria-hidden="true"></i>
+              Cancel</button>
+            <button type="button" class="btn btn-sm "><i class="mdi mdi-close-thick" aria-hidden="true"></i>
+              Cancel Portin
+            </button>
+          </div>
+
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/af-2.3.5/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/cr-1.5.2/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/sc-2.0.2/sp-1.1.1/sl-1.3.1/datatables.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
