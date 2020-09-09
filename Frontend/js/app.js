@@ -1,4 +1,21 @@
 $(function () {
+  $(".hamburger").on("click", function () {
+    $(this).toggleClass("is-active");
+  });
+
+  $(".people-effect img").each(function (index) {
+    if (index == 2) {
+      setTimeout(() => {
+        heroPeople(this);
+      }, 2000);
+    }
+  });
+
+
+  $(".people-effect img").on("mouseover", function () {
+    console.log("mouseover");
+    heroPeople(this);
+  });
 
   $(".toggle-main-nav").on("click", function (e) {
     e.preventDefault();
@@ -182,4 +199,107 @@ function exportCSVFile(headers, items, fileName) {
       document.body.removeChild(link);
     }
   }
+}
+
+function heroPeople(item) {
+  var this_people = $(item).attr("people");
+  var this_people_top = $(item).offset().top;
+  var this_people_left = $(item).offset().left;
+  var this_people_right = $(item).offset().left + $(item).width();
+  $(".background-effect img").removeClass("active");
+  $(".background-effect img").each(function () {
+    if ($(this).attr("people") == this_people) {
+      if (!$(this).hasClass("active")) {
+        $(this).addClass("active");
+      }
+    }
+  });
+
+  $(".text-effect > div").removeClass("active");
+  $(".text-effect > div").each(function () {
+    if ($(this).attr("people") == this_people) {
+      if ($(this).hasClass("bubble-left")) {
+        if ($(window).width() > 992) {
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 12vw); left:calc(" +
+              this_people_right +
+              "px - 10vw)"
+            )
+            .addClass("active");
+        }
+        if ($(window).width() <= 992 && $(window).width() > 600) {
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 18vw); left:calc(" +
+              this_people_right +
+              "px - 10vw)"
+            )
+            .addClass("active");
+        }
+        if ($(window).width() <= 600) {
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 23vw); left:calc(" +
+              this_people_right +
+              "px - 10vw)"
+            )
+            .addClass("active");
+        }
+      } else {
+        if ($(window).width() > 992) {
+          this_people_left = this_people_left - $(this).width();
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 12vw); left:calc(" +
+              this_people_left +
+              "px + 8vw)"
+            )
+            .addClass("active");
+        }
+        if ($(window).width() <= 992 && $(window).width() > 600) {
+          this_people_left = this_people_left - $(this).width();
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 18vw); left:calc(" +
+              this_people_left +
+              "px + 8vw)"
+            )
+            .addClass("active");
+        }
+        if ($(window).width() <= 600) {
+          this_people_left = this_people_left - $(this).width();
+          $(this)
+            .attr(
+              "style",
+              "top:calc(" +
+              this_people_top +
+              "px - 23vw); left:calc(" +
+              this_people_left +
+              "px + 8vw)"
+            )
+            .addClass("active");
+        }
+      }
+    }
+  });
+
+  $(window).resize(function () {
+    $(".text-effect > div").removeClass("active");
+  });
 }
