@@ -13,7 +13,6 @@ $(function () {
 
 
   $(".people-effect img").on("mouseover", function () {
-    console.log("mouseover");
     heroPeople(this);
   });
 
@@ -143,8 +142,29 @@ $(function () {
     });
   }
 
-
-
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#church",
+      start: "top center",
+      end: "bottom",
+      scrub: true
+    }
+  });
+  tl.to("#church___1", {
+      scale: 1.3
+    }, "church")
+    .to("#church___2", {
+      y: '-5%',
+      scale: 1.1
+    }, "church")
+    .to("#church___3", {
+      y: '10%',
+      scale: .9
+    }, "church")
+    .to("#church___4", {
+      y: '-30%'
+    }, "church")
+    .add("church");
 });
 
 function columnVisibilityControl(table) {

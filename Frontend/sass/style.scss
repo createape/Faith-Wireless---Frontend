@@ -120,6 +120,7 @@ body {
 
 .main-nav {
   background-color: $white;
+  box-shadow: 0 0 8px #0000002f;
 
   .container {
     padding-right: 0;
@@ -334,7 +335,7 @@ body {
 ///////////////////////////////////////////////
 .block-pricing {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: calc(100px - 1.5rem);
 
   .block-pricing__item {
     background-color: #EFF9F9;
@@ -457,6 +458,199 @@ body {
 ////////////////////////////////////////////////
 //       End   Pricing
 ///////////////////////////////////////////////
+
+////////////////////////////////////////////////
+//       Start   Block of info
+///////////////////////////////////////////////
+.block-of-info {
+  padding-top: 100px;
+  padding-bottom: calc(100px - 1.5rem);
+
+  .block-of-info__item {
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .block-of-info__icon {
+    max-height: 135px;
+    margin-bottom: 25px;
+  }
+
+  .block-of-info__title {
+    text-align: center;
+    font-size: 24px;
+    font-family: $font;
+    font-weight: 700;
+    color: #262626;
+    margin-bottom: 15px;
+  }
+
+  .block-of-info__text {
+    text-align: center;
+    font-size: 16px;
+    font-family: $font;
+    color: #808080;
+    font-weight: 500;
+  }
+}
+
+////////////////////////////////////////////////
+//       End   Block of info
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//       Start   Mission
+///////////////////////////////////////////////
+
+.block-mission {
+  padding-top: 100px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+
+#church {
+  position: relative;
+  margin-top: -40px;
+
+  &___1,
+  &___2,
+  &___4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: center bottom;
+  }
+
+  &___2 {
+    transform-origin: center;
+  }
+
+  &___3 {
+    position: relative;
+    transform-origin: center;
+  }
+
+}
+
+
+////////////////////////////////////////////////
+//       End   Mission
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//       Start   Help Build
+///////////////////////////////////////////////
+
+.block-help-build {
+  padding-top: 100px;
+  background-color: $green;
+  overflow: hidden;
+
+  @media (max-width:767px) {
+    text-align: center;
+    padding-bottom: 40px
+  }
+
+  .title-big {
+    color: $white;
+
+    @media (max-width:767px) {
+      margin-top: 30px;
+    }
+  }
+
+  .img-fluid {
+    @media (max-width:767px) {
+      width: 230px;
+    }
+  }
+
+}
+
+////////////////////////////////////////////////
+//       End   Help Build
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//       Start   Footer
+///////////////////////////////////////////////
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  img {
+    filter: grayscale(100%);
+  }
+
+  .footer-copy {
+    width: 310px;
+    text-align: center;
+
+    p {
+      font-size: 10px;
+      padding-top: 10px;
+      color: #9e9e9e;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+
+    a {
+      font-size: 13px;
+      font-family: $font;
+      color: $black;
+      text-align: center;
+      flex: 1;
+      text-decoration: underline;
+      transition: color .5s ease-in-out;
+
+      &:hover {
+        color: $green-light;
+      }
+    }
+  }
+
+  .footer-social {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 40px;
+      color: #6A6A6A;
+      transition: color .5s ease-in-out;
+
+      &:hover {
+        color: $green-light;
+      }
+    }
+  }
+
+  @media(max-width:767px) {
+    text-align: center;
+
+    .footer-social {
+      margin: 0 auto;
+    }
+
+    .footer-copy {
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+  }
+}
+
+////////////////////////////////////////////////
+//       End   Footer
+///////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////
 //       Start   Main Content
@@ -1971,3 +2165,7 @@ select {
   }
 
 }
+
+////////////////////////////////////////////////
+//       Home page hero
+///////////////////////////////////////////////
