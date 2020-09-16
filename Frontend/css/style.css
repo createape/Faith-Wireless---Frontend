@@ -9,6 +9,7 @@
 
 .card {
   border: 0;
+  border-radius: 10px;
 }
 
 .max-width-420 {
@@ -28,6 +29,7 @@
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  margin-left: 30px;
 }
 
 .form-group .form-control {
@@ -35,7 +37,7 @@
   background-color: #F2F2F2;
   font-size: 18px;
   color: #000000;
-  border-radius: 5px;
+  border-radius: 40px;
   outline: none !important;
 }
 
@@ -186,6 +188,32 @@
   }
 }
 
+.title-2 {
+  font-size: 36px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #262626;
+}
+
+@media (max-width: 1200px) {
+  .title-2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .title-2 {
+    font-size: 26px;
+  }
+}
+
+.title-3 {
+  font-size: 30px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #262626;
+}
+
 .subtitle {
   font-size: 20px;
   font-family: "Nunito", sans-serif;
@@ -260,14 +288,156 @@
   margin-right: auto;
 }
 
+.max-width-300 {
+  max-width: 300px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-width-200 {
+  max-width: 200px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.min-width-260 {
+  min-width: 260px !important;
+}
+
 .max-width-830 {
   max-width: 830px !important;
   margin-left: auto;
   margin-right: auto;
 }
 
+.max-width-880 {
+  max-width: 880px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .min-height-60vh {
   min-width: 60vh;
+}
+
+.custom-link {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  text-decoration: underline;
+  font-weight: 700;
+  -webkit-transition: color .5s ease-in-out;
+  transition: color .5s ease-in-out;
+  color: #000000;
+}
+
+.custom-link-2 {
+  color: #2CBF88;
+}
+
+.custom-link i {
+  font-size: 16px;
+}
+
+.custom-link:hover {
+  color: #009199;
+}
+
+.steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.steps__item {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  border-radius: 40px;
+  background-color: #009199;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .steps__item {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+.steps__item:before, .steps__item:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #009199;
+}
+
+.steps__item:before {
+  left: -10px;
+}
+
+.steps__item:after {
+  right: -10px;
+}
+
+.steps__item:last-child:after {
+  display: none;
+}
+
+.steps__item:first-child:before {
+  display: none;
+}
+
+.steps__item.active {
+  background-color: #2CBF88;
+}
+
+.steps__item.active:before, .steps__item.active:after {
+  background-color: #2CBF88;
+}
+
+.steps__item.active span {
+  width: 0;
+  height: 0;
+  border-bottom: 32px solid #ffffff;
+  border-left: 43px solid transparent;
+  position: absolute;
+  bottom: -40px;
+  left: -16px;
+}
+
+@media (max-width: 767px) {
+  .steps__item.active span {
+    border-bottom: 32px solid #ffffff;
+    border-left: 36px solid transparent;
+  }
+}
+
+.steps__item.undone {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.steps__item.undone:before, .steps__item.undone:after {
+  background-color: #ffffff;
 }
 
 body {
@@ -566,7 +736,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   border: 0;
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #2CBF88 !important;
 }
 
@@ -996,9 +1166,40 @@ body {
   }
 }
 
+.frontend-login {
+  padding-top: 100px;
+}
+
 .main-content {
   min-height: 60vh;
   overflow: hidden;
+}
+
+.main-content .main-content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .main-content .main-content-header {
+    display: block;
+    text-align: center;
+  }
+  .main-content .main-content-header .steps {
+    padding-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .main-content.use-background {

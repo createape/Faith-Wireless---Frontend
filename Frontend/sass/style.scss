@@ -314,7 +314,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     border: 0;
-    color: $white;
+    color: $white !important;
     background-color: $green-light !important;
   }
 
@@ -388,7 +388,7 @@ body {
       margin-bottom: 15px;
     }
 
-    &.petter{
+    &.petter {
       background-image: url(../images/pattern.png);
       background-size: cover;
       background-position: center;
@@ -396,7 +396,7 @@ body {
 
     }
 
-    &.petter-2{
+    &.petter-2 {
       background-image: url(../images/pattern_unlimited.png);
       background-size: cover;
       background-position: center;
@@ -415,7 +415,8 @@ body {
 
       font-weight: 900;
       position: relative;
-      &:before{
+
+      &:before {
         content: "";
         position: absolute;
         top: 0;
@@ -442,7 +443,7 @@ body {
       font-weight: 700;
 
 
-      &:before{
+      &:before {
         content: "";
         position: absolute;
         top: 0;
@@ -450,9 +451,9 @@ body {
         width: 100%;
         height: 100%;
         background-image: url(../images/sim___2.png);
-      background-size: 267px auto;
-      background-position: center bottom;
-      background-repeat: no-repeat;
+        background-size: 267px auto;
+        background-position: center bottom;
+        background-repeat: no-repeat;
       }
 
       div {
@@ -779,6 +780,20 @@ body {
 //       End   Footer
 ///////////////////////////////////////////////
 
+////////////////////////////////////////////////
+//       End   Login
+///////////////////////////////////////////////
+
+.frontend-login {
+  padding-top: 100px;
+}
+
+////////////////////////////////////////////////
+//       End   Login
+///////////////////////////////////////////////
+
+
+
 
 ////////////////////////////////////////////////
 //       Start   Main Content
@@ -790,6 +805,25 @@ body {
   overflow: hidden;
   // padding-left: 94px;
   // padding-right: 94px;
+
+  .main-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    @media (max-width:767px) {
+      display: block;
+      text-align: center;
+
+      .steps {
+        padding-top: 20px;
+        justify-content: center;
+      }
+    }
+
+  }
 
   &.use-background {
     background-color: #DDEFF0;

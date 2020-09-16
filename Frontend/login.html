@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/hamburgers.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="body">
+    <div class="main-container ">
+      <header class="main-nav fixed-top">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="hamburger hamburger--squeeze">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </button>
+
+            <a class="navbar-brand" href="#">
+              <img src="./images/logo_header.svg" width="130" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our mission</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Phones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bring my own device</a>
+                </li>
+
+                <li class="nav-item my-account">
+                  <a class="nav-link nav-link-btn" href="#">My Account</a>
+                </li>
+
+              </ul>
+            </div>
+            <ul class="nav nav-btn-container">
+              <li class="nav-item my-account">
+                <a class="nav-link nav-link-btn" href="#">My Account</a>
+              </li>
+              <li class="nav-item">
+                <!-- <img src="./images/cart.svg" alt="cart"> -->
+                <a class="nav-link nav-link-btn nav-btn-cart" href="#"> <i class="mdi mdi-cart" aria-hidden="true"></i>
+                  <span class="nav-btn-cart__count">9</span></a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+
+      </header>
+      <div class="main-content use-background">
+
+
+
+        <div class="container">
+
+          <div class="max-width-880 frontend-login">
+            <div class="row">
+              <div class="col-md-6 mb-5">
+                <div class="card">
+                  <div class="card-body ">
+                    <h2 class="title-2 text-center pt-3 mb-0">
+                      Login
+                    </h2>
+                    <form action="">
+                      <div class="max-width-300">
+                        <div class="form-group mt-0">
+                          <label for="user">Username or email address</label>
+                          <input type="text" class="form-control" name="user" id="user" aria-describedby="user"
+                            placeholder="Username or email address">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="last-name">Password</label>
+                          <input type="text" class="form-control" id="password" name="password"
+                            aria-describedby="password" placeholder="Password">
+                        </div>
+                        <p class="mt-3 mb-3 text-center">Or login with:</p>
+                        <div class="social-login text-center mb-1">
+                          <a href="" class="pl-1 pr-1"><img src="./images/login___facebook.svg" alt="Facebook"></a>
+                          <a href="" class="pl-1 pr-1"><img src="./images/login___linkedin.png" alt="Linkedin"></a>
+                          <a href="" class="pl-1 pr-1"><img src="./images/login___twiter.svg" alt="Twitter"></a>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-0 mt-3 max-width-200">
+                          <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                          <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                        </div>
+                        <div class=" text-center mt-2 pt-3 mb-4">
+                          <input type="submit" value="Login" class="min-width-260 btn btn-primary btn-lg">
+                          <div class="pt-3">
+                            <a href="#" class="custom-link">Lost Password?</a>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="title-2 text-center pt-3 mb-0">
+                      Register
+                    </h2>
+                    <form action="">
+                      <div class="max-width-300">
+                        <div class="form-group mt-0">
+                          <label for="user">Email address</label>
+                          <input type="text" class="form-control" name="user" id="user" aria-describedby="user"
+                            placeholder="Email address">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="text" class="form-control" id="password" name="password"
+                            aria-describedby="password" placeholder="Password">
+                        </div>
+
+                        <div class="form-group pb-3">
+                          <label for="confirm-password">Confirm Password</label>
+                          <input type="text" class="form-control" id="confirm-password" name="confirm-password"
+                            aria-describedby="password" placeholder="Confirm Password">
+                        </div>
+
+                        <div class="text-center mt-4 pt-4 mb-4">
+                          <input type="submit" value="Register" class="min-width-260 btn btn-primary btn-lg">
+                          <div class="pt-3">
+                            <a href="#" class="custom-link custom-link-2 "><i class="mdi mdi-help-circle-outline mr-1"
+                                aria-hidden="true"></i>
+                              Disclaimer</a>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto"><img src="./images/logo_header.svg" width="130" alt=""></div>
+            <div class="col-md-auto ml-auto mr-auto">
+              <div class="footer-copy">
+                <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                </div>
+                <p>Copyright 2018 Faith Wireless, 1307 Hodges Street, Raleigh, NC. All Rights Reserved </p>
+              </div>
+            </div>
+            <div class="col-md-auto">
+              <div class="footer-social">
+                <a href="#"><i class="mdi mdi-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-youtube" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
