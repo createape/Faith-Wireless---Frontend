@@ -154,7 +154,7 @@ sans-serif;
 .title-big {
   font-size: 67px;
   font-family: $font;
-  font-weight: 700;
+  font-weight: 800;
   color: #262626;
 
   @media(max-width:1200px) {
@@ -258,4 +258,8 @@ sans-serif;
   max-width: 830px !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+.min-height-60vh {
+  min-width: 60vh;
 }

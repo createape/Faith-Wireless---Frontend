@@ -151,7 +151,7 @@
 .title-big {
   font-size: 67px;
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   color: #262626;
 }
 
@@ -264,6 +264,10 @@
   max-width: 830px !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+.min-height-60vh {
+  min-width: 60vh;
 }
 
 body {
@@ -575,6 +579,14 @@ body {
   padding-bottom: calc(100px - 1.5rem);
 }
 
+.block-pricing .btn {
+  min-width: 180px;
+}
+
+.block-pricing-2 {
+  padding-bottom: 0;
+}
+
 .block-pricing .block-pricing__item {
   background-color: #EFF9F9;
   border-radius: 10px;
@@ -610,6 +622,82 @@ body {
   color: #ffffff;
   width: 130px;
   text-align: center;
+}
+
+.block-pricing .card-header img {
+  display: block;
+  margin: 0 auto;
+  width: 96px;
+  margin-bottom: 15px;
+}
+
+.block-pricing .card-header.petter {
+  background-image: url(../images/pattern.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.block-pricing .card-header.petter-2 {
+  background-image: url(../images/pattern_unlimited.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.block-pricing .card-header-1 {
+  background-color: #2EA8A6;
+  text-align: center;
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 100%;
+  padding-top: 73px;
+  padding-bottom: 72px;
+  font-weight: 900;
+  position: relative;
+}
+
+.block-pricing .card-header-1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/sim___1.png);
+  background-size: 267px auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.block-pricing .card-header-2 {
+  background-color: #2CBF88;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 100%;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  font-weight: 700;
+}
+
+.block-pricing .card-header-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/sim___2.png);
+  background-size: 267px auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.block-pricing .card-header-2 div {
+  font-size: 63px;
+  line-height: 100%;
+  font-weight: 900;
 }
 
 .block-pricing .block-pricing__capacity {
@@ -665,6 +753,42 @@ body {
   position: relative;
   top: -15px;
   margin-bottom: 0px;
+  display: block;
+  width: 100%;
+}
+
+.block-pricing .block-pricing__interval-2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000000;
+  display: inline-block;
+  margin-bottom: 0px;
+  position: relative;
+  top: -15px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.block-pricing .block-pricing__interval-2 i::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background-color: #999999;
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.block-pricing .block-pricing__interval-2 span {
+  font-size: 18px;
+  text-transform: none;
+  font-weight: 500;
+  padding-left: 1px;
 }
 
 .block-pricing .block-pricing__features {
@@ -873,8 +997,17 @@ body {
 }
 
 .main-content {
-  min-height: 100vh;
+  min-height: 60vh;
   overflow: hidden;
+}
+
+.main-content.use-background {
+  background-color: #DDEFF0;
+  background-image: url(../images/background.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 21vw;
 }
 
 @media (max-width: 767px) {
