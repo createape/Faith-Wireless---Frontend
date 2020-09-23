@@ -305,21 +305,24 @@ body {
 .btn {
   // background-color: $green-light;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800 !important;
   transition: background-color .6s ease-in-out;
-  border-radius: 40px;
+  border-radius: 50px;
+  height: 60px;
+  color: $green !important;
+  text-decoration: none !important;
 
   &-primary {
     height: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
     border: 0;
     color: $white !important;
     background-color: $green-light !important;
   }
 
   &:hover {
-    background-color: $green-dark;
+    background-color: $green-dark !important;
   }
 }
 
@@ -786,6 +789,51 @@ body {
 
 .frontend-login {
   padding-top: 100px;
+
+  @media (max-width:767px) {
+    padding-top: 30px;
+
+    #frontend-login__block-1,
+    #frontend-login__block-2 {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .title-2 {
+      display: none;
+    }
+  }
+
+  .login-nav {
+    text-align: center;
+
+    @media (min-width:768px) {
+      display: none;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+      width: 120px;
+      font-family: $font;
+      font-size: 24px;
+      font-weight: 200;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      color: $black;
+
+      &.active,
+      &:hover {
+        border-bottom: 3px solid $green-light;
+        font-weight: 800;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 ////////////////////////////////////////////////
@@ -813,6 +861,19 @@ body {
     padding-top: 50px;
     padding-bottom: 40px;
 
+    &-center {
+      display: block;
+      text-align: center;
+
+      .steps {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+    }
+
     @media (max-width:767px) {
       display: block;
       text-align: center;
@@ -832,6 +893,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: 21vw;
+
+    @media(max-width: 767px) {
+      background-size: 200% auto;
+    }
   }
 
   &__header__content {
@@ -1792,14 +1857,14 @@ body {
 .show-info-content {
   display: block;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   .show-info-content__title {
     display: block;
-    font-size: 11px;
-    font-weight: 700;
-    color: #999;
-    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    color: $black;
+    // text-transform: uppercase;
     font-family: $font;
 
     a {
@@ -1815,7 +1880,7 @@ body {
     font-size: 14px;
     font-family: $font;
     color: $black;
-    font-weight: 800;
+    font-weight: 500;
 
     a {
       color: $black;
@@ -2061,9 +2126,274 @@ select {
 
 
 
+
+
 ////////////////////////////////////////////////
 //       End   Main Content
 ///////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////
+//       Start   choose a plan
+///////////////////////////////////////////////
+.select-a-plan {
+
+  padding-top: 100px;
+
+  .card {
+    overflow: hidden;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .select-a-plan-img {
+    position: relative;
+    background-color: $green;
+    background-image: url(../images/pattern__plan.svg);
+    background-size: cover;
+
+    @media (max-width:767px) {
+      display: none;
+    }
+
+    img {
+      width: 295px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .select-a-plan-details {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .select-a-plan-count {
+        font-size: 228px;
+        font-weight: 800;
+        line-height: 100%;
+        text-align: center;
+        color: $white;
+      }
+
+      .select-a-plan-unit {
+        font-size: 94px;
+        font-weight: 900;
+        line-height: 100%;
+        text-align: center;
+        margin-top: -20px;
+        color: $white;
+      }
+
+      &.small-text {
+        .select-a-plan-count {
+          font-size: 300px;
+          line-height: 60%;
+        }
+
+        .select-a-plan-unit {
+          font-size: 46px;
+          // margin-top: -70px;
+        }
+      }
+    }
+
+  }
+
+  .select-a-plan__content {
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+
+    .max-width-360 {
+      max-width: 400px !important;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+
+
+
+    .select-a-plan__content__img {
+      position: relative;
+      background-color: $green;
+      background-image: url(../images/pattern__plan.svg);
+      background-size: cover;
+      width: 95px;
+      height: 95px;
+      border-radius: 70px;
+      margin: 20px auto;
+
+      @media (min-width:768px) {
+        display: none;
+      }
+
+      img {
+        width: 34px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .select-a-plan__content__img-details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .select-a-plan__content__img-count {
+          font-size: 26px;
+          font-weight: 800;
+          line-height: 100%;
+          text-align: center;
+          color: $white;
+        }
+
+        .select-a-plan__content__img-unit {
+          font-size: 11px;
+          font-weight: 900;
+          line-height: 100%;
+          text-align: center;
+          // margin-top: -20px;
+          color: $white;
+        }
+
+
+      }
+    }
+
+    .title-3 {
+      @media (max-width:767px) {
+        font-size: 36px;
+      }
+    }
+
+    .title-3,
+    .subtitle {
+      @media (max-width:767px) {
+        text-align: center;
+      }
+    }
+
+    .subtitle-3 {
+      @media (max-width:767px) {
+        font-size: 15px;
+      }
+    }
+
+    .btn-container {
+      @media (max-width:767px) {
+        text-align: center;
+      }
+    }
+
+
+    .nav {
+      @media (max-width:767px) {
+        justify-content: center;
+      }
+
+      .nav-item {
+        margin: 4px;
+
+        @media (max-width:767px) {
+          flex: 1;
+          text-align: center;
+        }
+
+        &:last-child {
+
+          @media (max-width:767px) {
+            flex: 0 0 calc(100% - 8);
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+
+        }
+
+        .nav-link {
+          border: 2px solid #b9e7e8;
+          font-weight: 800;
+          font-family: $font;
+          font-size: 14px;
+          border-radius: 5px;
+          color: $black;
+          transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out;
+
+          &:hover,
+          &.active {
+            background-color: $green;
+            border: 2px solid $green;
+            color: $white;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+////////////////////////////////////////////////
+//       End   choose a plan
+///////////////////////////////////////////////
+
+////////////////////////////////////////////////
+//       Start   choose a phone
+///////////////////////////////////////////////
+
+.small-box-select-phone {
+  .card-body {
+    // padding: 8px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media(max-width:767px) {
+    // height: 100%;
+    // display: flex;
+
+    .title-4 {
+      font-size: 18px;
+    }
+
+    img {
+      width: 67px;
+    }
+
+    .card {
+      height: 100%;
+    }
+
+    &:first-child {
+      padding-right: 8px;
+    }
+
+    &:last-child {
+      padding-left: 8px;
+    }
+
+    .text {
+      // font-size: 12px;
+    }
+
+
+  }
+}
+
+////////////////////////////////////////////////
+//       End   choose a phone
+///////////////////////////////////////////////
+
 
 
 ////////////////////////////////////////////////

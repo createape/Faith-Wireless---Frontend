@@ -12,6 +12,71 @@ $(function () {
   });
 
 
+
+  $(".sidebard-OS__content .close, .sidebard-OS__content .close-2").on("click", function () {
+    $(".phone-tabs__link").removeClass("active");
+
+    $(".sidebard-OS").removeClass("show");
+
+    $(".sidebard-OS__content__item").removeClass("active");
+  });
+
+
+  $(".phone-tabs__link").on("click", function () {
+    $(".phone-tabs__link").removeClass("active");
+    $(this).addClass("active");
+    $(".sidebard-OS").addClass("show");
+
+    $(".sidebard-OS__content__item").removeClass("active");
+    $($(this).data("target")).addClass("active");
+  });
+
+  $(".input-number-count__plus,.input-number-count__minus").on("click", function () {
+    var value = parseInt($(this).parent().find("input").val());
+    if (isNaN(value)) {
+      value = 1;
+    } else {
+      if ($(this).hasClass("input-number-count__plus")) {
+        $(this).parent().find("input").val(value + 1);
+      } else {
+        if (value > 1) {
+          $(this).parent().find("input").val(value - 1);
+        } else {
+          $(this).parent().find("input").val(1);
+        }
+      }
+
+    }
+
+  });
+
+  $(".select-a-plan__content__nav a").on("click", function () {
+    var data = $(this).data();
+    $(this).parent().parent().find("a").removeClass("active");
+    $(this).addClass("active");
+    $(".change-value-count").html(data.count);
+    $(".change-value-unit").html(data.unit);
+    $(".change-value-price").html(data.price);
+
+    if(data.removeclass !== undefined){
+      $(".select-a-plan-details").removeClass(data.removeclass);
+    }else{
+      $(".select-a-plan-details").addClass(data.class);
+    }
+
+  });
+
+  $(".login-nav a").on("click", function () {
+    $(this).parent().find("a").removeClass("active");
+    $(this).addClass("active");
+
+    $($(this).data("target")).parent().find("div").removeClass("active");
+    $($(this).data("target")).addClass("active");
+
+  });
+
+
+
   $(".people-effect img").on("mouseover", function () {
     heroPeople(this);
   });
