@@ -1094,7 +1094,6 @@ body {
   -webkit-transition: background-color .6s ease-in-out;
   transition: background-color .6s ease-in-out;
   border-radius: 50px;
-  height: 60px;
   color: #009199 !important;
   text-decoration: none !important;
 }
@@ -2520,7 +2519,7 @@ body {
 }
 
 .btn-fill {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #009199;
 }
 

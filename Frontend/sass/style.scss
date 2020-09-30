@@ -308,7 +308,6 @@ body {
   font-weight: 800 !important;
   transition: background-color .6s ease-in-out;
   border-radius: 50px;
-  height: 60px;
   color: $green !important;
   text-decoration: none !important;
 
@@ -1718,7 +1717,7 @@ body {
   }
 
   &-fill {
-    color: $white;
+    color: $white !important;
     background-color: $green;
   }
 
