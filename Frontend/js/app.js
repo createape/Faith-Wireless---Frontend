@@ -57,10 +57,10 @@ $(function () {
     $(".change-value-count").html(data.count);
     $(".change-value-unit").html(data.unit);
     $(".change-value-price").html(data.price);
-
-    if(data.removeclass !== undefined){
+    $("#plan_id").val(data.id);
+    if (data.removeclass !== undefined) {
       $(".select-a-plan-details").removeClass(data.removeclass);
-    }else{
+    } else {
       $(".select-a-plan-details").addClass(data.class);
     }
 
