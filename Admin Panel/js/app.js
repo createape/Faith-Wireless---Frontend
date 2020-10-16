@@ -5,6 +5,12 @@ $(function () {
     $(".main-nav").toggleClass("collasep");
     $(this).toggleClass("show");
   });
+  $(".container-dropdown > a").on("click", function (e) {
+    e.preventDefault();
+    $(this).parent().find("ul").toggleClass("show-dropdown");
+    $(this).parent().toggleClass("active");
+  });
+
   $(window).resize(function () {
     if (window.matchMedia("(max-width: 1100px)").matches) {
       $(".main-nav").addClass("collasep");

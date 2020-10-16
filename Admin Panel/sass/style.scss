@@ -192,6 +192,12 @@ body {
     color: #ffffff;
   }
 
+  .show-dropdown{
+    display: block;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
   .nav {
     max-width: 256px;
     margin-left: 50px;
@@ -203,9 +209,129 @@ body {
       max-width: 230px;
     }
 
-    li {
+    & > li {
+      position: relative;
+      min-height: 60px;
+      &:before {
+        content: "";
+        display: block;
+        width: 340px;
+        height: 100%;
+        border-radius: 8px;
+        background-color: $page-background;
+        position: absolute;
+        left: -15px;
+        top: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        z-index: 0;
 
-      a {
+      }
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #DCEEEF;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        height: 0;
+        &:before {
+          content: "";
+          display: block;
+          width: 328px;
+          height: 100%;
+          border-bottom-left-radius: 8px;
+          background-color: #DCEEEF;
+          position: absolute;
+          left: -15px;
+          top: 0;
+          opacity: 1;
+          transition: opacity .5s ease-in-out;
+          z-index: 1;
+        }
+        &> li{
+          z-index: 1;
+          padding-left: 40px;
+          &:last-child{
+            span {
+              border-bottom: 0;
+              }
+          }
+          & > a {
+            position: relative;
+            display: flex;
+            min-height: 60px;
+            position: relative;
+            padding: 0;
+            width: 100%;
+            white-space: nowrap;
+            color: $green-dark;
+            position: relative;
+            z-index: 4;
+
+            i {
+              &:before {
+                position: relative;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                transform-origin: center;
+                font-size: 14px;
+                transition: all .5s ease-in-out;
+                opacity: 0;
+              }
+
+
+            }
+
+            span {
+              font-size: 18px;
+              font-weight: 300;
+              position: absolute;
+              width: calc(100% - 10px);
+              left: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              border-bottom: 1px solid #005a663d;
+              padding-bottom: 15px;
+              padding-top: 15px;
+              transition: font-weight .5s ease-in-out;
+              font-family: $font;
+              transition: all .5s ease-in-out;
+            }
+          }
+          &:hover,
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+        & > a {
+          color: $green-dark;
+          // padding-left: 20px;
+
+          i {
+            &::before {
+              transform: translateY(-50%);
+              opacity: 1;
+              color: $green;
+            }
+
+          }
+
+          span {
+            font-weight: 700;
+            transform: translate(0, -50%);
+            padding-left: 20px;
+            // border-color: transparent;
+          }
+        }
+
+      }
+        }
+
+      }
+      & > a {
         position: relative;
         display: flex;
         min-height: 60px;
@@ -214,19 +340,7 @@ body {
         width: 100%;
         white-space: nowrap;
 
-        &:before {
-          content: "";
-          display: block;
-          width: 340px;
-          height: 100%;
-          border-radius: 8px;
-          background-color: $page-background;
-          position: absolute;
-          left: -15px;
-          top: 0;
-          opacity: 0;
-          transition: opacity .5s ease-in-out;
-        }
+
 
         i {
           &:before {
@@ -260,22 +374,20 @@ body {
 
       }
 
-      &:first-child {
+      & > &:first-child {
         span {
           border-top: 1px solid $green-dark;
         }
-
       }
 
       &:hover,
       &.active {
-        a {
+        &::before {
+          opacity: 1;
+        }
+        & > a {
           color: $green-dark;
           // padding-left: 20px;
-
-          &::before {
-            opacity: 1;
-          }
 
           i {
             &::before {
@@ -312,7 +424,33 @@ body {
       }
 
       li {
+        ul{
+          li{
+            padding-left: 0;
 
+            &.active{
+              a{
+                i{
+                 &::before{
+                  color: $green;
+                 }
+                }
+              }
+            }
+            a{
+              i{
+               &::before{
+                opacity: 1;
+                color: $green-dark;
+               }
+              }
+            }
+          }
+          &:before {
+              padding-left: 20px;
+              width: 70px;
+            }
+        }
         a {
           &::before {
             width: 70px;

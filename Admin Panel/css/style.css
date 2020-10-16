@@ -332,6 +332,12 @@ body {
   color: #ffffff;
 }
 
+.main-nav .show-dropdown {
+  display: block;
+  height: auto !important;
+  overflow: visible !important;
+}
+
 .main-nav .nav {
   max-width: 256px;
   margin-left: 50px;
@@ -346,19 +352,12 @@ body {
   }
 }
 
-.main-nav .nav li a {
+.main-nav .nav > li {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 60px;
-  position: relative;
-  padding: 0;
-  width: 100%;
-  white-space: nowrap;
 }
 
-.main-nav .nav li a:before {
+.main-nav .nav > li:before {
   content: "";
   display: block;
   width: 340px;
@@ -371,9 +370,128 @@ body {
   opacity: 0;
   -webkit-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
+  z-index: 0;
 }
 
-.main-nav .nav li a i:before {
+.main-nav .nav > li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #DCEEEF;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 0;
+}
+
+.main-nav .nav > li ul:before {
+  content: "";
+  display: block;
+  width: 328px;
+  height: 100%;
+  border-bottom-left-radius: 8px;
+  background-color: #DCEEEF;
+  position: absolute;
+  left: -15px;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  z-index: 1;
+}
+
+.main-nav .nav > li ul > li {
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.main-nav .nav > li ul > li:last-child span {
+  border-bottom: 0;
+}
+
+.main-nav .nav > li ul > li > a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 60px;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  color: #005A66;
+  position: relative;
+  z-index: 4;
+}
+
+.main-nav .nav > li ul > li > a i:before {
+  position: relative;
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 14px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+}
+
+.main-nav .nav > li ul > li > a span {
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  width: calc(100% - 10px);
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-bottom: 1px solid #005a663d;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  -webkit-transition: font-weight .5s ease-in-out;
+  transition: font-weight .5s ease-in-out;
+  font-family: "Nunito", sans-serif;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.main-nav .nav > li ul > li:hover::before, .main-nav .nav > li ul > li.active::before {
+  opacity: 1;
+}
+
+.main-nav .nav > li ul > li:hover > a, .main-nav .nav > li ul > li.active > a {
+  color: #005A66;
+}
+
+.main-nav .nav > li ul > li:hover > a i::before, .main-nav .nav > li ul > li.active > a i::before {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  color: #009199;
+}
+
+.main-nav .nav > li ul > li:hover > a span, .main-nav .nav > li ul > li.active > a span {
+  font-weight: 700;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  padding-left: 20px;
+}
+
+.main-nav .nav > li > a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 60px;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.main-nav .nav > li > a i:before {
   position: relative;
   left: 0px;
   top: 50%;
@@ -386,7 +504,7 @@ body {
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
 
-.main-nav .nav li a span {
+.main-nav .nav > li > a span {
   font-size: 18px;
   font-weight: 300;
   position: absolute;
@@ -407,24 +525,24 @@ body {
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
 
-.main-nav .nav li:first-child span {
+.main-nav .nav > li > .main-nav .nav > li:first-child span {
   border-top: 1px solid #005A66;
 }
 
-.main-nav .nav li:hover a, .main-nav .nav li.active a {
-  color: #005A66;
-}
-
-.main-nav .nav li:hover a::before, .main-nav .nav li.active a::before {
+.main-nav .nav > li:hover::before, .main-nav .nav > li.active::before {
   opacity: 1;
 }
 
-.main-nav .nav li:hover a i::before, .main-nav .nav li.active a i::before {
+.main-nav .nav > li:hover > a, .main-nav .nav > li.active > a {
+  color: #005A66;
+}
+
+.main-nav .nav > li:hover > a i::before, .main-nav .nav > li.active > a i::before {
   -webkit-transform: translate(5px, -50%);
           transform: translate(5px, -50%);
 }
 
-.main-nav .nav li:hover a span, .main-nav .nav li.active a span {
+.main-nav .nav > li:hover > a span, .main-nav .nav > li.active > a span {
   font-weight: 700;
   -webkit-transform: translate(5px, -50%);
           transform: translate(5px, -50%);
@@ -457,6 +575,24 @@ body {
             flex: 0 0 60px;
     margin-left: 15px;
   }
+}
+
+.main-nav.collasep .nav li ul li {
+  padding-left: 0;
+}
+
+.main-nav.collasep .nav li ul li.active a i::before {
+  color: #009199;
+}
+
+.main-nav.collasep .nav li ul li a i::before {
+  opacity: 1;
+  color: #005A66;
+}
+
+.main-nav.collasep .nav li ul:before {
+  padding-left: 20px;
+  width: 70px;
 }
 
 .main-nav.collasep .nav li a::before {
