@@ -155,7 +155,7 @@ $(function () {
         $(this).parent().removeClass("has-content");
       }
     });
-  });
+  }).trigger("keyup");
 
   // Slider
   if ($('.info-slider').length > 0) {
