@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/hamburgers.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="body">
+    <div class="main-container ">
+      <header class="main-nav fixed-top">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="hamburger hamburger--squeeze">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </button>
+
+            <a class="navbar-brand" href="#">
+              <img src="./images/logo_header.svg" width="130" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our mission</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Phones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bring my own device</a>
+                </li>
+
+                <li class="nav-item my-account">
+                  <a class="nav-link nav-link-btn" href="#">My Account</a>
+                </li>
+
+              </ul>
+            </div>
+            <ul class="nav nav-btn-container">
+              <li class="nav-item my-account">
+                <a class="nav-link nav-link-btn" href="#">My Account</a>
+              </li>
+              <li class="nav-item">
+                <!-- <img src="./images/cart.svg" alt="cart"> -->
+                <a class="nav-link nav-link-btn nav-btn-cart" href="#"> <i class="mdi mdi-cart" aria-hidden="true"></i>
+                  <span class="nav-btn-cart__count">9</span></a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+
+      </header>
+      <div class="main-content use-background">
+        <div class="container">
+        <div class="main-content-header">
+          <h2 class="title-3 mb-0">Payment Details</h2>
+          <div class="steps">
+            <a class="steps__item done" href="#"><i class="mdi mdi-cart" aria-hidden="true"></i>
+            </a>
+            <a class="steps__item active" href="#"><i class="mdi mdi-credit-card-outline" aria-hidden="true"></i> <span></span>
+            </a>
+            <a class="steps__item undone" href="#"><i class="mdi mdi-shopping" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="cart-product-container mb-4">
+            <div class="card">
+              <div class="card-body max-width-620">
+                <div class="row pt-3">
+                  <div class="col-md-6">
+                    <h3 class="title-6 text-md-left text-center">Pay With Your Credit Card</h3>
+                  </div>
+                  <div class="col-md-6 text-md-right text-center">
+                    <img src="./images/cards.png" class="grayscale img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="first-name">Card Number</label>
+                      <input type="text" class="form-control" name="first-name" id="first-name"
+                        aria-describedby="firstName" placeholder="Card Number">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+
+                      <label for="first-name">Expiry Date</label>
+                      <input type="text" class="form-control" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)"  name="first-name" id="first-name"
+                        aria-describedby="firstName" placeholder="MM/YY">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="first-name">CCV</label>
+                      <input type="text" class="form-control" name="first-name" id="first-name"
+                        aria-describedby="firstName" placeholder="CCV">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-5 pb-2 max-width-500 ">
+                  <p class="text text-center" >Disclaimer about saving credit card info and recurring charges</p>
+                </div>
+
+                <hr>
+
+                <div class="pt-4 pb-2 max-width-500 ">
+                  <p class="text text-sm text-center" >You will not be charged for service until you activate. On activation you will be charged a prorated portion of your monthly service until your renewal date.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-summary-container mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row mb-3 pt-3 align-items-center">
+                  <div class="col-8 text-sm-1">
+                   <img src="./images/cart___product__1.png" alt="" class="width-38 mr-2"> 1GB Plan
+                  </div>
+                  <div class="col-4  text-right text text-sm-1">
+                    $50.00/mo
+                  </div>
+                </div>
+                <hr>
+                <div class="row mb-3 align-items-center">
+                  <div class="col-8 text-sm-1">
+                   <img src="./images/cart___product__2.png" alt="" class="width-38 mr-2"> Sim Card
+                  </div>
+                  <div class="col-4  text-right text text-sm-1">
+                    $0.00
+                  </div>
+                </div>
+
+                <div class="divider mb-3"></div>
+
+                <div class="row mb-3">
+                  <div class="col-8">
+                    <a href="#" class="custom-link font-16"><img src="./images/arrow_down__checkout.svg" alt="" class="width-20 mr-2">Total</a>
+                  </div>
+                  <div class="col-4 text-right font-weight-bold">
+                    $0.00
+                  </div>
+                </div>
+                <hr>
+                <div class="row mb-3">
+                  <div class="col-8">
+                    <a href="#" class="custom-link font-16"><img src="./images/arrow_down__checkout.svg" alt="" class="width-20 mr-2">Recurring Total</a>
+                  </div>
+                  <div class="col-4 text-right font-weight-bold">
+                    $51.00/mo
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+
+                  <div class="col-12 text-right font-12">
+                    First Renewal: June 7. 2020
+                  </div>
+                </div>
+
+                <div class="text-center mb-2 hidden-desktop">
+                  <a href="#" data-toggle="modal" data-target="#show-info-checkout" class="link-show-alert"><span>You will not be charged for service until activation</span>  <i class="mdi mdi-information-outline"
+                    aria-hidden="true"></i> </a>
+                </div>
+
+                <div class="text-center pt-4 pb-3">
+                  <input type="submit" value="Next" class="btn btn-lg btn-primary  min-width-260">
+                </div>
+                <div class="text-center mb-3">
+                  <a href="#" class="custom-link">Back to Billing</a>
+                </div>
+                <div class="important-alert mb-3 hidden-mobile">
+                  <div class="important-alert__content">
+                    <h4 class="title-6 text-center">You will not be charged for service until activation!</h4>
+                    <hr>
+                    <p class="text-sm-1 text-center mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+      </div>
+
+        <!-- Modal for Your phone works message -->
+  <div class="modal fade" id="show-info-checkout" tabindex="-1" role="dialog" aria-labelledby="show-info-checkoutTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body  max-width-620">
+          <div class="row mt-3 max-width-360">
+            <div class="col-auto title text-green-light pr-0 pl-0"><i class="mdi mdi-information-outline"
+              aria-hidden="true"></i> </div>
+            <div class="col">
+              <h4 class="title-6 mt-2">You will not be charged for service until activation.</h4>
+            </div>
+          </div>
+
+          <p class="text max-width-360">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto"><img src="./images/logo_header.svg" width="130" alt=""></div>
+            <div class="col-md-auto ml-auto mr-auto">
+              <div class="footer-copy">
+                <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                </div>
+                <p>Copyright 2018 Faith Wireless, 1307 Hodges Street, Raleigh, NC. All Rights Reserved </p>
+              </div>
+            </div>
+            <div class="col-md-auto">
+              <div class="footer-social">
+                <a href="#"><i class="mdi mdi-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-youtube" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/masking-input.js" data-autoinit="true"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

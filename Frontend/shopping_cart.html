@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/hamburgers.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="body">
+    <div class="main-container ">
+      <header class="main-nav fixed-top">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="hamburger hamburger--squeeze">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </button>
+
+            <a class="navbar-brand" href="#">
+              <img src="./images/logo_header.svg" width="130" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our mission</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Phones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Bring my own device</a>
+                </li>
+
+                <li class="nav-item my-account">
+                  <a class="nav-link nav-link-btn" href="#">My Account</a>
+                </li>
+
+              </ul>
+            </div>
+            <ul class="nav nav-btn-container">
+              <li class="nav-item my-account">
+                <a class="nav-link nav-link-btn" href="#">My Account</a>
+              </li>
+              <li class="nav-item">
+                <!-- <img src="./images/cart.svg" alt="cart"> -->
+                <a class="nav-link nav-link-btn nav-btn-cart" href="#"> <i class="mdi mdi-cart" aria-hidden="true"></i>
+                  <span class="nav-btn-cart__count">9</span></a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+
+      </header>
+      <div class="main-content use-background">
+        <div class="container">
+        <div class="main-content-header">
+          <h2 class="title-3 mb-0">Shopping Cart</h2>
+          <div class="steps">
+            <a class="steps__item active" href="#"><i class="mdi mdi-cart" aria-hidden="true"></i> <span></span>
+            </a>
+            <a class="steps__item undone" href="#"><i class="mdi mdi-credit-card-outline" aria-hidden="true"></i>
+            </a>
+            <a class="steps__item undone" href="#"><i class="mdi mdi-shopping" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="cart-product-container mb-4">
+            <div class="card cart-content">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table cart-content___table">
+                    <tr>
+                      <th class="hidden-mobile"></th>
+                      <th class="hidden-mobile">Product</th>
+                      <th class="hidden-mobile">Price</th>
+                      <th class="hidden-mobile">Qnt</th>
+                      <th class="hidden-mobile">Subtotal</th>
+                    </tr>
+                    <tr>
+                      <td class="cart-content___table___img"><img src="./images/cart___product__1.png" alt="">  <a href="#" class="cart-content___table___delete hidden-mobile"><img src="./images/delete.svg" alt=""></a> </td>
+                      <td>
+                        1GB Plan
+                        <div class="font-weight-bold hidden-desktop">$50.00/mo</div>
+                      </td>
+                      <td class="hidden-mobile">
+                        $25.00/mo
+
+                      </td>
+                      <td  class="relative" valign="bottom">
+                        <a href="#" class="cart-content___table___delete hidden-desktop"><img src="./images/delete.svg" alt=""></a>
+                        <div class="input-number-count width-97">
+                        <input type="number" min="1" value="1" class="form-control">
+                        <button class="input-number-count__plus">+</button>
+                        <button class="input-number-count__minus">-</button>
+                      </div>
+                      </td>
+                      <td class="font-weight-bold hidden-mobile">$50.00/mo</td>
+                    </tr>
+                    <tr>
+                      <td class="cart-content___table___img"><img src="./images/cart___product__2.png" alt=""> <a href="#" class="cart-content___table___delete hidden-mobile"><img src="./images/delete.svg" alt=""></a></td>
+                      <td>
+                        Sim Card
+                        <div class="font-weight-bold hidden-desktop">$50.00/mo</div>
+                      </td>
+                      <td class="hidden-mobile">$0.00</td>
+                      <td class="relative">
+                        <a href="#" class="cart-content___table___delete hidden-desktop"><img src="./images/delete.svg" alt=""></a>
+                        <div class="input-number-count width-97">
+                        <input type="number" min="1" value="1" class="form-control">
+                        <button class="input-number-count__plus">+</button>
+                        <button class="input-number-count__minus">-</button>
+                      </div></td>
+                      <td class="font-weight-bold hidden-mobile" >$0.00</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="cart-produt-footer text-right">
+                  <input type="submit" value="Update Cart" class="btn">
+                  <input type="submit" value="Add a Plan" class="btn btn-fill">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-summary-container mb-4">
+            <div class="card height-100">
+              <div class="card-body">
+                <div class="row mb-3 pt-3">
+                  <div class="col-8">
+                    Subtotal
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $0.00
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8" >
+                    General Sales Tax
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $0.00
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8">
+                    Telecom Tax
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $0.00
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8">
+                    Regulatory Recovery Charge
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $0.00
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8 font-weight-bold ">
+                    Total
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $0.00
+                  </div>
+                </div>
+
+                <div class="divider mb-3"></div>
+
+                <div class="row mb-3">
+                  <div class="col-8">
+                    Recurring Subtotal
+                  </div>
+                  <div class="col-4 text-right">
+                    $50.00/mo
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8">
+                    Taxes and Surcharges
+                  </div>
+                  <div class="col-4 text-right">
+                    $1.00/mo
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col-8 font-weight-bold ">
+                    Recurring Total
+                  </div>
+                  <div class="col-4 font-weight-bold text-right">
+                    $51.00/mo
+                  </div>
+                </div>
+                <div class="row mb-3">
+
+                  <div class="col-12 text-right font-12">
+                    First Renewal: June 7. 2020
+                  </div>
+                </div>
+                <div class="text-center pt-4 pb-3">
+                  <input type="submit" value="Checkout" class="btn btn-lg btn-primary min-width-260">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto"><img src="./images/logo_header.svg" width="130" alt=""></div>
+            <div class="col-md-auto ml-auto mr-auto">
+              <div class="footer-copy">
+                <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                </div>
+                <p>Copyright 2018 Faith Wireless, 1307 Hodges Street, Raleigh, NC. All Rights Reserved </p>
+              </div>
+            </div>
+            <div class="col-md-auto">
+              <div class="footer-social">
+                <a href="#"><i class="mdi mdi-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="mdi mdi-youtube" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
