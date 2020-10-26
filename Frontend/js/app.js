@@ -11,6 +11,20 @@ $(function () {
     }
   });
 
+  $(".faqs__content .collapse").each(function (index) {
+
+    $("#" + $(this).attr("id")).on('show.bs.collapse', function (e) {
+      console.log(e.currentTarget)
+      $(e.currentTarget).parent().addClass("active");
+    });
+    $("#" + $(this).attr("id")).on('hide.bs.collapse	', function (e) {
+      console.log(e.currentTarget)
+      $(e.currentTarget).parent().removeClass("active");
+    })
+
+  });
+
+
 
 
   $(".sidebard-OS__content .close, .sidebard-OS__content .close-2").on("click", function () {
