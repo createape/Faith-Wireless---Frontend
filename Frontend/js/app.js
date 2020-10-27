@@ -11,6 +11,19 @@ $(function () {
     }
   });
 
+  if($(".loading").length > 0){
+    setTimeout(() => {
+      var tl = gsap.timeline({});
+      tl.to(".loading", {
+        opacity: '0',
+      }).to(".loading", {
+        display: 'none',
+      });
+    }, 3000);
+  }
+
+
+
   $(".faqs__content .collapse").each(function (index) {
 
     $("#" + $(this).attr("id")).on('show.bs.collapse', function (e) {
@@ -221,29 +234,33 @@ $(function () {
     });
   }
 
-  var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#church",
-      start: "top center",
-      end: "bottom",
-      scrub: true
-    }
-  });
-  tl.to("#church___1", {
-      scale: 1.3
-    }, "church")
-    .to("#church___2", {
-      y: '-5%',
-      scale: 1.1
-    }, "church")
-    .to("#church___3", {
-      y: '10%',
-      scale: .9
-    }, "church")
-    .to("#church___4", {
-      y: '-30%'
-    }, "church")
-    .add("church");
+  if($("#church").length > 0){
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#church",
+        start: "top center",
+        end: "bottom",
+        scrub: true
+      }
+    });
+    tl.to("#church___1", {
+        scale: 1.3
+      }, "church")
+      .to("#church___2", {
+        y: '-5%',
+        scale: 1.1
+      }, "church")
+      .to("#church___3", {
+        y: '10%',
+        scale: .9
+      }, "church")
+      .to("#church___4", {
+        y: '-30%'
+      }, "church")
+      .add("church");
+  }
+
+
 });
 
 function columnVisibilityControl(table) {
