@@ -66,7 +66,7 @@
   margin-left: 30px;
 }
 
-.form-group .form-control {
+.form-group .form-control, .form-group #card-holder-name {
   border-color: #F2F2F2;
   background-color: #F2F2F2;
   font-size: 18px;
@@ -75,19 +75,19 @@
   outline: none !important;
 }
 
-.form-group .form-control::-webkit-input-placeholder {
+.form-group .form-control::-webkit-input-placeholder, .form-group #card-holder-name::-webkit-input-placeholder {
   color: #000000;
 }
 
-.form-group .form-control:-ms-input-placeholder {
+.form-group .form-control:-ms-input-placeholder, .form-group #card-holder-name:-ms-input-placeholder {
   color: #000000;
 }
 
-.form-group .form-control::-ms-input-placeholder {
+.form-group .form-control::-ms-input-placeholder, .form-group #card-holder-name::-ms-input-placeholder {
   color: #000000;
 }
 
-.form-group .form-control::placeholder {
+.form-group .form-control::placeholder, .form-group #card-holder-name::placeholder {
   color: #000000;
 }
 
@@ -1147,6 +1147,37 @@
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
   }
+}
+
+#card-element {
+  border-color: #F2F2F2;
+  background-color: #F2F2F2;
+  border-radius: 40px;
+}
+
+#card-holder-name {
+  border-color: #F2F2F2;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  color: #000000;
+  border-radius: 40px;
+  outline: none !important;
+}
+
+#card-holder-name::-webkit-input-placeholder {
+  color: #000000;
+}
+
+#card-holder-name:-ms-input-placeholder {
+  color: #000000;
+}
+
+#card-holder-name::-ms-input-placeholder {
+  color: #000000;
+}
+
+#card-holder-name::placeholder {
+  color: #000000;
 }
 
 body {
@@ -2952,6 +2983,8 @@ a.btn-primary {
 
 .card-content-header__actions .btn-primary {
   background-color: #2CBF88;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 .card-content-header__actions .btn-primary i {

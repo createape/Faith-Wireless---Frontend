@@ -1807,7 +1807,8 @@ a.btn-primary{
 
     &-primary {
       background-color: $green-light;
-
+      padding-right: 20px !important;
+      padding-left: 20px !important;
       i {
         color: $white;
         font-size: 15px;

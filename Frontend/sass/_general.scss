@@ -65,7 +65,7 @@ sans-serif;
     margin-left: 30px;
   }
 
-  .form-control {
+  .form-control,#card-holder-name {
     border-color: #F2F2F2;
     background-color: #F2F2F2;
     font-size: 18px;
@@ -1044,4 +1044,24 @@ sans-serif;
   0% {transform: translate(-50%,-50%) scale(1);}
   50% {transform: translate(-50%,-50%) scale(1.2);}
   100% {transform: translate(-50%,-50%) scale(1);}
+}
+
+
+
+#card-element{
+  border-color: #F2F2F2;
+  background-color: #F2F2F2;
+  border-radius: 40px;
+}
+#card-holder-name {
+  border-color: #F2F2F2;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  color: $black;
+  border-radius: 40px;
+  outline: none !important;
+
+  &::placeholder {
+    color: $black;
+  }
 }
