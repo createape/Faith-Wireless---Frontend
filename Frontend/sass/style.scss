@@ -327,7 +327,14 @@ body {
 
 a.btn-primary{
   line-height: 34px;
+
+  &.btn-sm{
+    line-height: 36px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
+
 
 
 ////////////////////////////////////////////////
