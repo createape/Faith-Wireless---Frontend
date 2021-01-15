@@ -283,7 +283,7 @@
 }
 
 .title-6 {
-  font-size: 16px;
+  font-size: 16px !important;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   color: #262626;
@@ -1207,6 +1207,12 @@
   .footer, .main-admin-user__nav, .main-admin-user-header, .main-content-header, .btn {
     display: none !important;
   }
+}
+
+.small-td td {
+  height: 30px !important;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 body {
