@@ -1781,6 +1781,7 @@ a.btn-primary{
 }
 
 .card-content-header__actions {
+
   position: relative;
 
   // @media (max-width:767px) {
@@ -1807,6 +1808,7 @@ a.btn-primary{
     }
 
     span {
+
       @media (max-width:767px) {
         display: none;
       }
@@ -1823,7 +1825,15 @@ a.btn-primary{
     }
   }
 
-
+  &.v2{
+    .btn {
+      text-transform: capitalize !important;
+      span {
+        color: #000000;
+        text-transform: capitalize !important;
+      }
+    }
+  }
 }
 
 

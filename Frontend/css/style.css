@@ -27,6 +27,10 @@
   margin: 0 auto;
 }
 
+.max-width-170 {
+  max-width: 170px;
+}
+
 .text-green {
   color: #009199 !important;
 }
@@ -121,6 +125,16 @@
 
 .form-group.is-invalid .form-control {
   border-color: #de4b4b;
+}
+
+.table-small-dotted tr td {
+  padding: 0 !important;
+  height: 35px !important;
+  border-top: 1px dashed #05959980 !important;
+}
+
+.table-small-dotted tr:first-child td {
+  border-top: 0 !important;
 }
 
 .table thead th {
@@ -317,7 +331,7 @@
 }
 
 .text {
-  font-size: 18px;
+  font-size: 13px;
   font-family: "Nunito", sans-serif;
   color: #4D4D4D;
   font-weight: 400;
@@ -336,6 +350,15 @@
 
 .text-sm {
   font-size: 14px;
+}
+
+.text-x-sm {
+  font-size: 13px;
+  color: #000000;
+}
+
+.text-x-x-sm {
+  font-size: 12px;
 }
 
 @media (max-width: 500px) {
@@ -1178,6 +1201,12 @@
 
 #card-holder-name::placeholder {
   color: #000000;
+}
+
+@media print {
+  .footer, .main-admin-user__nav, .main-admin-user-header, .main-content-header, .btn {
+    display: none !important;
+  }
 }
 
 body {
@@ -2996,6 +3025,15 @@ a.btn-primary.btn-sm {
 .card-content-header__actions .btn-primary i {
   color: #ffffff;
   font-size: 15px;
+}
+
+.card-content-header__actions.v2 .btn {
+  text-transform: capitalize !important;
+}
+
+.card-content-header__actions.v2 .btn span {
+  color: #000000;
+  text-transform: capitalize !important;
 }
 
 .modal-backdrop {
