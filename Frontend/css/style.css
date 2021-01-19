@@ -137,6 +137,20 @@
   border-top: 0 !important;
 }
 
+.table-small {
+  width: 100%;
+}
+
+.table-small td, .table-small th {
+  border-top: 1px solid #E5E5E5;
+  padding: 5px 0px !important;
+  height: auto !important;
+}
+
+.table-small tr:first-child td, .table-small tr:first-child th {
+  border-top: 0px solid #E5E5E5;
+}
+
 .table thead th {
   border-bottom: 0;
   border-top: 0;
@@ -717,6 +731,19 @@
   width: 43px;
   height: 43px;
   font-size: 20px;
+}
+
+.no-border-top {
+  border-top: 0 !important;
+}
+
+.no-py {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.height-auto {
+  height: auto !important;
 }
 
 .no-border-radius-top {
