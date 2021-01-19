@@ -151,6 +151,19 @@
   border-top: 0px solid #E5E5E5;
 }
 
+.no-border-top {
+  border-top: 0 !important;
+}
+
+.no-py {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.height-auto {
+  height: auto !important;
+}
+
 .table thead th {
   border-bottom: 0;
   border-top: 0;
